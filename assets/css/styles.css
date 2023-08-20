@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+
+:root {
+    --primary: #f65d4e;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+}
+/* contact info section */
+.contact-info {
+    background-color: #282828;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.contact-info a {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.contact-info a:hover {
+    color: var(--primary)
+}
+
+.contact-info span {
+    font-weight: 600;
+}
+
+.contact-info span:hover {
+    color: var(--primary);
+}
+
+.contact-info span i {
+    color: var(--primary);
+}
+
+.media-icons i {
+    transition: 0.4s;
+}
+
+.media-icons i:hover {
+    color: var(--primary);
+    font-size: 0.7rem;
+}
+
+/* search bar */
+.search-bar {
+    padding: 2rem 0;
+}
+.categories button {
+    padding: 0.75rem;
+    background-color: var(--primary);
+    border: none;
+}
+
+.categories button:hover {
+    background-color: var(--primary);
+}
+
+.categories button::after {
+    display: none;
+}
+
+.search-utils form input {
+    background-color: rgb(246, 246, 246) !important; 
+    padding: 0.75rem;
+}
+
+.search-utils form button {
+    background-color: rgb(246, 246, 246) !important; 
+}
+
+.search-utils form button:hover {
+    color: var(--primary);
+}
+
+.user-info i { 
+    color: #000;
+}
+
+.user-info i:hover {
+    color: var(--primary);
+}
+
+/* nav bar */
