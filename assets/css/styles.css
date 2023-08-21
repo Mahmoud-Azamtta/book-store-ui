@@ -53,6 +53,14 @@ body {
 .search-bar {
     padding: 2rem 0;
 }
+
+.categories {
+    width: 30%;
+}
+
+.search-bar form {
+    width: 70%;
+}
 .categories button {
     padding: 0.75rem;
     background-color: var(--primary);
@@ -65,6 +73,15 @@ body {
 
 .categories button::after {
     display: none;
+}
+
+.categories button span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.categories button i {
+    font-size: 0.75rem;
 }
 
 .search-utils form input {
