@@ -106,3 +106,44 @@ body {
 }
 
 /* nav bar */
+.navbar .nav-link::after {
+    display: none;
+}
+
+.navbar i {
+    font-size: 0.75rem;
+}
+
+.navbar .nav-link {
+    font-weight:600 ;
+    position: relative;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link.active ~ i {
+    color: var(--primary) !important;
+}
+
+.navbar .nav-link::before {
+    content: "";
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+    display: block;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.navbar .nav-item:hover i,
+.navbar .nav-item:hover .nav-link {
+    color: var(--primary) !important;
+}
+.navbar .nav-item:hover .nav-link::before {
+    visibility: visible;
+    transform: scale(5);
+}
