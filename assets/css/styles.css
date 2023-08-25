@@ -19,6 +19,11 @@ body {
     text-decoration: none;
     color: #fff;
     background-color: var(--primary);
+    transition: 0.2s;
+}
+
+.bookory-btn:hover {
+    background-color: #f4402f;    
 }
 
 .bookory-btn i {
@@ -45,6 +50,44 @@ body {
     position: absolute;
     top: 1.75rem;
     left: 26%
+}
+
+.book-desc a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.book-list img {
+    width: 100%;
+    margin: auto 0;
+    border-radius: 1rem;
+}
+
+.book-desk a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.book-desc > a:hover {
+    color: var(--primary);
+}
+
+.book-desc p {
+    font-size: .75rem;
+}
+
+.book-desc .star-rating {
+    font-size: 0.8rem;
+}
+
+.book-desc span {
+    color: var(--primary);
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 /* .section-title h2::after {
@@ -260,32 +303,9 @@ header {
     border-radius: 1rem;
 }
 
-.book-list .item a {
+.book-list .img-icons a {
     text-decoration: none;
     color: #000;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.book-list .item > a:hover {
-    color: var(--primary);
-}
-
-.book-list .item p {
-    font-size: .75rem;
-}
-
-.book-list .item .star-rating {
-    font-size: 0.8rem;
-}
-
-.book-list .item span {
-    color: var(--primary);
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.book-list .img-icons a {
     display: block;
     width: 2.5rem;
     height: 2.5rem;
@@ -332,6 +352,32 @@ header {
     color: #fff;
     background-color: var(--primary);
 }
+
+/* weekly deals */
+.weekly-deals .deals .banner {
+    background-image: url(../images/h1-bg1.jpg);
+    background-size: cover;
+    border-radius: 1.5rem;
+}
+
+.weekly-deals .left-side,
+.weekly-deals .right-side {
+    width: 42.5%;
+}
+
+.weekly-deals .left-side span {
+    font-size: 0.8rem;
+}
+
+.weekly-deals .right-side .countdown {
+    background-color: #fccc4d;
+    padding: 0.7rem 2rem;
+}
+
+.weekly-deals .items .book-cover img {
+    width: 90%;
+    border-radius: 1rem;
+}
 /* meida query */
 @media (max-width: 1399.98px) {
     .container,
@@ -358,7 +404,7 @@ header {
 @media (max-width: 991.98px) {
     .section-title .line {
         width: 45%;
-        left: 35%;
+        left: 36%;
     }
     .navbar .navbar-brand,
     .navbar .navbar-cart {
@@ -378,14 +424,56 @@ header {
     .header-content {
         margin: auto;
     }
-}
 
-@media (max-width: 767.98px) {
-    .section-title .line {
-        display: none;
+    /* weekly deals  */
+    .weekly-deals .items {
+        display: flex; 
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .weekly-deals .items .item {
+        width: 50%;
+        margin-top: 1rem;
+    } 
+
+    .weekly-deals .items .item img {
+        width: 100%;
+    }
+
+    .weekly-deals .items .item .book-desc {
+        margin-top: 1rem !important;
     }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
+    :root {
+        font-size: 13px;
+    }
+    .section-title .line {
+        display: none;
+    }
+    .weekly-deals .items .item .book-desc {
+        margin-top: 0rem !important;
+    }
 
+    .weekly-deals .items .item .book-desc a {
+        margin-top: 0rem !important;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .weekly-deals .items .item {
+        width: 100%;
+    }
+
+    .weekly-deals .right-side {
+        margin-left: 2rem;
+    }
+
+    .weekly-deals .banner .countdown {
+        font-size: .8rem !important;
+        padding: 0.7rem 1rem;
+    }
 }
