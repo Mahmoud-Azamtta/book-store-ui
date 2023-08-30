@@ -78,6 +78,16 @@ body {
 
 .book-desc p {
     font-size: .75rem;
+    color: #777;
+}
+
+.book-desc p:not(.overview) {
+    cursor: pointer;
+    color: #999;
+}
+
+.book-desc p:not(.overview):hover {
+    color: var(--primary)
 }
 
 .book-desc .star-rating {
@@ -414,7 +424,31 @@ header {
     width: 90%;
     border-radius: 1rem;
 }
-/* meida query */
+
+/* trending items */
+.trends .trend-item .image-container img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.trends .trend-item {
+    border-radius: 1rem;
+}
+
+.trends .trend-item.first {
+    background-color: #f5f7fe;
+}
+
+.trends .trend-item.second {
+    background-color: #fef5f5;
+}
+
+.trends .trend-item .image-container {
+    padding: 0;
+    border-radius: 1rem;
+}
+
+/* media query */
 @media (max-width: 1399.98px) {
     .container,
     .container-sm,
