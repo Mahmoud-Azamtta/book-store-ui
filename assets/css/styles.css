@@ -90,6 +90,10 @@ body {
     color: var(--primary)
 }
 
+.book-desc .overview {
+    font-size: 0.85rem;
+}
+
 .book-desc .star-rating {
     font-size: 0.8rem;
 }
@@ -443,10 +447,20 @@ header {
     background-color: #fef5f5;
 }
 
+.trends .trend-item .book-desc {
+    width: 65%;
+}
 .trends .trend-item .image-container {
+    width: 35%;
     padding: 0;
     border-radius: 1rem;
 }
+
+.feedback {
+    background-image: url(../images/h1-bg2.jpg); 
+
+}
+
 
 /* media query */
 @media (max-width: 1399.98px) {
@@ -456,7 +470,8 @@ header {
     .conatiner-lg,
     .container-xl,
     .container-xxl {
-        max-width: 1140px;
+        max-width: 1300px;
+        padding: 0 2rem;
     }
 
     .section-title .line {
@@ -468,6 +483,14 @@ header {
 @media (max-width: 1199.98px) {
     .search-bar .search-utils .btn i {
         margin-left: 1.5rem !important;
+    }
+
+    .trends .trend-item .image-container {
+        width: 50%;
+    }
+
+    .trends .trend-item .book-desc {
+        width: 50%;
     }
 }
 
@@ -514,6 +537,14 @@ header {
     .weekly-deals .items .item .book-desc {
         margin-top: 1rem !important;
     }
+
+    .trends .trend-item .image-container {
+        width: 30%;
+    }
+
+    .trends .trend-item.second {
+        margin-top: 1.5rem;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -531,6 +562,13 @@ header {
         margin-top: 0rem !important;
     }
 
+    .trends .trend-item .image-container {
+        width: 40%;
+    }
+
+    .trends .trend-item .book-desc {
+        width: 60%;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -545,5 +583,18 @@ header {
     .weekly-deals .banner .countdown {
         font-size: .8rem !important;
         padding: 0.7rem 1rem;
+    }
+
+    .trends .trend-item {
+        flex-wrap: wrap;
+    }
+
+    .trends .trend-item .image-container {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .trends .trend-item .image-container img {
+        width: 60%;
     }
 }
