@@ -455,13 +455,67 @@ header {
     padding: 0;
     border-radius: 1rem;
 }
-
+/* feedback */
 .feedback {
     background-image: url(../images/h1-bg2.jpg); 
-
+    background-size: cover;
 }
 
+.feedback .content {
+    margin-top: 9rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
 
+.feedback .content .carousel-title h2 {
+    color: gray;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback .content .carousel-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 5rem;
+    height: 1px;
+    background-color: var(--primary);
+    top: 3rem;
+}
+
+.feedback .sender {
+    font-size: 0.75rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback .sender span:last-child {
+    color: gray;
+}
+
+.feedback .sender i {
+    font-size: 6rem;
+    position: absolute;
+    top: 0.375rem;
+    opacity: 0.1;
+}
+
+.feedback .carousel-btn {
+    background-color: #bbb !important;
+    width: 8px;
+    height: 8px;
+    transition: width 0.25s, background-color 0.25s;   
+}
+
+.feecback .carousel-btn:hover {
+    background-color: var(--primary) !important;
+}
+
+.feedback .carousel-btn.active {
+    width: 1.5rem;
+    background-color: var(--primary) !important;
+}
 /* media query */
 @media (max-width: 1399.98px) {
     .container,
