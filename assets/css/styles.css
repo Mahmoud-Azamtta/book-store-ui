@@ -35,6 +35,62 @@ body {
     color: #ff9529
 }
 
+.img-container img {
+    width: 100%;
+    margin: auto 0;
+    border-radius: 1rem;
+}
+
+.img-icons a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.item .img-container {
+    position: relative;
+}
+
+.item .img-container .img-icons {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.item .img-container .heart {
+    transform: translateX(5px);
+    opacity: 0;
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+.item .img-container .seen {
+    transform: translateX(15px);
+    opacity: 0;
+    transition: opacity 0.15s 0.05s, transform 0.15s 0.05s;
+}
+
+.item .img-container .cart {
+    transform: translateX(20px);
+    opacity: 0;
+    transition: opacity 0.15s 0.1s, transform 0.15s 0.1s;
+}
+
+.item .img-container:hover a {
+    transform: translateX(0);
+    opacity: 100%;
+    transition: 0.2s
+}
+
+.item .img-container:hover a:hover {
+    color: #fff;
+    background-color: var(--primary);
+}
+
 .section-title h2 {
     font-weight: 600;
 }
@@ -104,14 +160,6 @@ body {
     font-weight: 600;
 }
 
-/* .section-title h2::after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 0.5px;
-    position: absolute;
-    background-color: #000;
-} */
 /* contact info section */
 .contact-info {
     background-color: #282828;
@@ -311,61 +359,7 @@ header {
 
 
 /* bestselling list */
-.book-list img {
-    width: 100%;
-    margin: auto 0;
-    border-radius: 1rem;
-}
 
-.book-list .img-icons a {
-    text-decoration: none;
-    color: #000;
-    display: block;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-top: 10px;
-    border-radius: 50%;
-    background-color: #fff;
-}
-
-.book-list .item .img-container {
-    position: relative;
-}
-
-.book-list .item .img-container .img-icons {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-}
-
-.book-list .item .img-container .heart {
-    transform: translateX(5px);
-    opacity: 0;
-    transition: opacity 0.15s, transform 0.15s;
-}
-
-.book-list .item .img-container .seen {
-    transform: translateX(15px);
-    opacity: 0;
-    transition: opacity 0.15s 0.05s, transform 0.15s 0.05s;
-}
-
-.book-list .item .img-container .cart {
-    transform: translateX(20px);
-    opacity: 0;
-    transition: opacity 0.15s 0.1s, transform 0.15s 0.1s;
-}
-
-.book-list .item .img-container:hover a {
-    transform: translateX(0);
-    opacity: 100%;
-    transition: 0.2s
-}
-
-.book-list .item .img-container:hover a:hover {
-    color: #fff;
-    background-color: var(--primary);
-}
 
 /* weekly deals */
 .weekly-deals .deals .banner {
@@ -515,6 +509,15 @@ header {
 .feedback .carousel-btn.active {
     width: 1.5rem;
     background-color: var(--primary) !important;
+}
+
+/* popular boosk */
+.popular-books .offer {
+    background-image: url(../images/h1-banner1.jpg);
+    background-size: cover;
+    border-radius: 1rem;
+    
+
 }
 /* media query */
 @media (max-width: 1399.98px) {
