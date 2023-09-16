@@ -96,16 +96,20 @@ body {
 }
 
 .section-title {
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
 }
 
 .section-title .line {
     background-color: rgba(0, 0, 0, .2);
     height: 0.5px;
     width: 60%;
-    position: absolute;
-    top: 1.75rem;
-    left: 26%
+    /* position: absolute; */
+    /* top: 1.75rem; */
+    /* left: 26% */
 }
 
 .book-desc a {
@@ -513,11 +517,106 @@ header {
 
 /* popular boosk */
 .popular-books .offer {
+    border-radius: 1rem;
+    max-height: 825px;
     background-image: url(../images/h1-banner1.jpg);
     background-size: cover;
-    border-radius: 1rem;
-    
+}
 
+/* .popular-books .offer {
+    position: relative;
+} */
+
+/* .popular-books .offer img {
+    border-radius: 1rem;
+} */
+
+.popular-books .offer .bookory-btn {
+    color: #000;
+    background-color: #fff;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.popular-books .offer .bookory-btn i {
+    color: var(--primary) !important;
+}
+
+.popular-books .offer .bookory-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.popular-books .offer h2 {
+    position: relative;
+    width: fit-content;
+}
+
+.popular-books .offer h2::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 0;
+    height: 3px;
+    right: 0;
+    top: 100%;
+    transition: width 0.2s;
+}
+
+.popular-books .offer:hover h2::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+/* genres */
+.genres button {
+    height: fit-content;
+    color: rgba(0, 0, 0, .8);
+    transition: color 0.1s;
+}
+
+.genres button:hover {
+    color: var(--primary);
+}
+
+.genres .genre h2 {
+    bottom: 1rem;
+    left: 2.5rem;
+}
+
+.genres .genre {
+    overflow: hidden;
+}
+
+.genres .genre img {
+    transition: transform 0.2s;
+
+}
+
+.genres .genre:hover img {
+    transform: scale(1.1);    
+}
+
+/* authors */
+.others .authors {
+    background-color: #fff8f2;
+    border-radius: 1.5rem;
+}
+.others .authors .author img {
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.others .authors .author h3 {
+    font-size: 1rem;
+}
+
+.others .authors .author a {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.75rem;
+    text-decoration: none;
 }
 /* media query */
 @media (max-width: 1399.98px) {
@@ -602,6 +701,8 @@ header {
     .trends .trend-item.second {
         margin-top: 1.5rem;
     }
+
+    /* popular books */
 }
 
 @media (max-width: 767.98px) {
