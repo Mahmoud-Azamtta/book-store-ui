@@ -612,11 +612,98 @@ header {
     font-size: 1rem;
 }
 
-.others .authors .author a {
+.others .authors .author > a {
     width: 1.75rem;
     height: 1.75rem;
     font-size: 0.75rem;
     text-decoration: none;
+}
+
+.others .authors .author a {
+    transition: color 0.1s;
+}
+
+.others .authors .author a:hover:not(.img-a) {
+    color: var(--primary) !important;
+}
+
+/* keep reading */
+.others .keep-reading .large .image-container {
+    width: 20rem;
+}
+
+.others .keep-reading .small .image-container {
+    width: 6rem;
+}
+
+/* statistics */
+.statistics .icon {
+    width: 5rem;
+    height: 5rem;
+    padding: 1.2rem;
+    transition: transform 0.4s;
+}
+
+.statistics .col > div:hover .icon {
+    transform: scale(0.9);
+}
+
+.statistics .col:nth-child(1) .icon {
+    background-color: #edebfc;
+}
+
+.statistics .col:nth-child(2) .icon {
+    background-color: #e9f9fd;
+}
+
+.statistics .col:nth-child(3) .icon {
+    background-color: #e8f6e1;
+}
+
+.statistics .col:nth-child(5) .icon {
+    background-color: #fbf1e6;
+}
+
+.statistics .content span {
+    font-size: 0.75rem;
+}
+
+/* footer */
+footer {
+    background-color: #282828;
+}
+
+.site-info {
+    border-right: solid #9995 1px;
+}
+
+footer .categories-available a,
+footer .services a,
+footer .explore a,
+footer .contact-info .work-times,
+footer .site-info .social-media,
+footer .site-info p {
+    color: #999;
+}
+
+footer .categories-available a,
+footer .services a,
+footer .explore a,
+footer .contact-info .work-times,
+footer .site-info {
+    font-size: 0.85rem;
+}
+
+footer .contact-info .tel {
+    color: var(--primary);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary);
 }
 /* media query */
 @media (max-width: 1399.98px) {
@@ -703,6 +790,14 @@ header {
     }
 
     /* popular books */
+
+    /* others */
+    .others .keep-reading .large .image-container {
+        width: 6rem;
+    }
+    .others .keep-reading .large .book-desc .overview {
+        display: none;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -726,6 +821,10 @@ header {
 
     .trends .trend-item .book-desc {
         width: 60%;
+    }
+
+    .statistics .content span {
+        font-size: 0.9rem;
     }
 }
 
@@ -755,4 +854,13 @@ header {
     .trends .trend-item .image-container img {
         width: 60%;
     }
+
+    .statistics .icon {
+        margin-left: 3rem !important;
+    }
+
+    .statistics .content {
+        margin-left: 3rem !important;
+    }
+
 }
