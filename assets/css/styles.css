@@ -698,12 +698,24 @@ footer .contact-info .tel {
     color: var(--primary);
 }
 
-footer a {
+footer a:not(.map) {
     text-decoration: none;
 }
 
 footer a:hover {
     color: var(--primary);
+}
+
+footer .copyright {
+    border-top: solid #9995 1px;
+}
+footer .copyright p {
+    font-size: 0.9rem;
+}
+
+footer .copyright p a {
+    text-decoration: none;
+    color: var(--primary) !important;
 }
 /* media query */
 @media (max-width: 1399.98px) {
@@ -734,6 +746,15 @@ footer a:hover {
 
     .trends .trend-item .book-desc {
         width: 50%;
+    }
+
+    .genres .genre:nth-child(3) {
+        display: none;
+    }
+
+    footer .site-info,
+    footer .contact-info {
+        margin-bottom: 3rem;
     }
 }
 
@@ -826,13 +847,34 @@ footer a:hover {
     .statistics .content span {
         font-size: 0.9rem;
     }
+
+    .genres .genre:nth-child(2) {
+        display: none;
+    }
+
+    .geners .container > div {
+    }
+
+    body > section.genres.my-5 > div.d-flex.align-items-center.my-5 > div > div {
+        justify-content: center !important;
+    }
 }
 
 @media (max-width: 575.98px) {
+    .bookory-btn span {
+        display: none;
+    }
+
+    .bookory-btn i {
+        margin-left: 0 !important;
+    }
     .weekly-deals .items .item {
         width: 100%;
     }
 
+    .contact-info:not(footer .contact-info) {
+        display: none;
+    }
     .weekly-deals .right-side {
         margin-left: 2rem;
     }
@@ -842,17 +884,17 @@ footer a:hover {
         padding: 0.7rem 1rem;
     }
 
-    .trends .trend-item {
-        flex-wrap: wrap;
+    .trends .trend-item .overview {
+        display:none;
+        
     }
-
-    .trends .trend-item .image-container {
-        width: 100%; 
-        text-align: center;
+    
+    .popular-books .col-lg-3.col-md-4.col-sm-6.border-end {
+        border-right: 0 !important;
     }
 
     .trends .trend-item .image-container img {
-        width: 60%;
+        width: 100%;
     }
 
     .statistics .icon {
@@ -863,4 +905,22 @@ footer a:hover {
         margin-left: 3rem !important;
     }
 
+    footer .site-info {
+        border-right: 0 ;
+    }
+
+    footer .contact-info {
+        padding-left: 0 !important;
+    }
+
+    footer .explore,
+    footer .services,
+    footer .categories-available {
+        margin-left: 0 !important
+    }
+
+    footer .image-container {
+        width:80%;
+        margin-top: 3rem;
+    }
 }
