@@ -717,6 +717,197 @@ footer .copyright p a {
     text-decoration: none;
     color: var(--primary) !important;
 }
+
+
+/* ------------ Shop page ------------ */
+/* shop title */
+.page-title {
+    background-color: #f0f0f0;
+}
+
+.page-title h1 {
+    font-size: 4rem;
+}
+
+.page-title .page-indicator {
+    font-size: 0.9rem;
+}
+
+.page-title .page-indicator i {
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.page-title .page-indicator a {
+    color: #999;
+}
+
+.page-title .page-indicator a:hover {
+    color: #333;
+}
+
+.page-title .page-indicator span {
+    color: var(--primary);
+}
+
+/* sidebar */
+.main-content .genre-list ul li input {
+    width: 15px;
+    height: 15px
+}
+
+.main-content  ul li span,
+.main-content  ul li label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.main-content  ul li label:hover {
+    color: var(--primary); 
+}
+
+.sidebar  ul li label:hover input {
+    background-color: var(--primary);
+}
+
+.sidebar  ul li label input[type="checkbox"] {
+    background-color: #000;
+}
+
+.main-content .price-filter .filter .line {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+}
+
+.main-content .price-filter .filter i {
+    cursor: e-resize;
+    font-size: 0.8rem;
+    border-radius: 50%;
+}
+
+.main-content .price-filter .filter i:hover {
+    box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.2)
+}
+
+.main-content .price-filter .price-range {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.main-content .price-filter .price-range span {
+    font-size: 0.8rem; 
+    color: #999;
+}
+
+.main-content .price-filter button {
+    font-size: 0.85rem;
+    transition: color 0.1s;
+}
+
+.main-content .price-filter button:hover {
+    color: var(--primary);
+}
+
+.main-content .ratings .rating-status > div {
+    font-size: 0.8rem;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.main-content .ratings i {
+    font-size: 0.8rem;
+}
+
+.main-content .ratings .rating-status > div:hover {
+    color: var(--primary);
+}
+
+.main-content .featured .featured-list .book-title {
+    font-size: 0.9rem;
+}
+
+.main-content .featured .featured-list .author {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.main-content .featured .featured-list a:hover {
+    color: var(--primary) !important;
+}
+
+/* shop menu */
+.shop-menu .view-options .grid-list button {
+    color: #999
+}
+.shop-menu .view-options .grid-list button:hover {
+    color: #000;
+}
+.shop-menu .view-options .grid-list .active-view {
+    color: #000;
+}
+.shop-menu .view select,
+.shop-menu .view select option {
+    font-size: 0.8rem;
+}
+
+.shop-menu .view select {
+    outline: none;
+}
+
+.shop-menu .view .items-shown span {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.main-content .menu-items .item button {
+    background-color: var(--primary);
+    width: 3rem;
+    height: 3rem;
+    position: relative
+}
+
+.main-content .menu-items .item .item-price-cart .add-text {
+    right: 0;
+    top: -1.6rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    width: 6rem;
+    background-color: #fff;
+    color: #999;
+    border: 1px solid #999;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.main-content .menu-items .item .item-price-cart .add-item:hover .add-text {
+    opacity: 1;
+}
+.main-content .page-indicators .active-page {
+    background-color: var(--primary) !important;
+    color: #fff;
+}
+.main-content .page-indicators button:not(.next) {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+}
+
+.main-content .page-indicators button {
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    border: none;
+}
+
+.main-content .page-indicators button:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.main-content .page-indicators .next i {
+    font-size: 0.6rem;
+}
+
 /* media query */
 @media (max-width: 1399.98px) {
     .container,
@@ -858,7 +1049,7 @@ footer .copyright p a {
 }
 
 @media (max-width: 575.98px) {
-    .bookory-btn {
+    .bookory-btn:not(.inverted) {
         padding: 0 !important;
         width: 2.5rem;
         height: 2.5rem;
@@ -867,7 +1058,7 @@ footer .copyright p a {
         align-items: center;
     }
 
-    .bookory-btn i {
+    .bookory-btn:not(.inverted) i {
         margin: 0 !important;
     }
 
@@ -879,9 +1070,6 @@ footer .copyright p a {
         display: none;
     }
 
-    .bookory-btn i {
-        margin-left: 0 !important;
-    }
     .weekly-deals .items .item {
         width: 100%;
     }
@@ -936,5 +1124,10 @@ footer .copyright p a {
     footer .image-container {
         width:80%;
         margin-top: 3rem;
+    }
+    .main-content .menu-items .item button {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8rem;
     }
 }
