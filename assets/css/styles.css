@@ -4,13 +4,52 @@
     --primary: #f65d4e;
 }
 
+body {
+    overflow: hidden;
+}
+
+.loading {
+    transition: 0.5s;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background: var(--primary);
+    width: 3px;
+    height: 24px;
+    transform: translateX(-50%);
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .form-control:focus {
     outline: none !important;
     box-shadow: none !important;
 }
 
 body {
-    font-family: 'Sora', sans-serif;
+    font-family: "Sora", sans-serif;
 }
 
 .bookory-btn {
@@ -23,7 +62,7 @@ body {
 }
 
 .bookory-btn:hover {
-    background-color: #f4402f;    
+    background-color: #f4402f;
 }
 
 .bookory-btn i {
@@ -32,7 +71,7 @@ body {
 
 .star-rating {
     font-size: 1rem;
-    color: #ff9529
+    color: #ff9529;
 }
 
 .img-container img {
@@ -83,7 +122,7 @@ body {
 .item .img-container:hover a {
     transform: translateX(0);
     opacity: 100%;
-    transition: 0.2s
+    transition: 0.2s;
 }
 
 .item .img-container:hover a:hover {
@@ -104,7 +143,7 @@ body {
 }
 
 .section-title .line {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, 0.2);
     height: 0.5px;
     width: 60%;
     /* position: absolute; */
@@ -137,7 +176,7 @@ body {
 }
 
 .book-desc p {
-    font-size: .75rem;
+    font-size: 0.75rem;
     color: #777;
 }
 
@@ -147,7 +186,7 @@ body {
 }
 
 .book-desc p:not(.overview):hover {
-    color: var(--primary)
+    color: var(--primary);
 }
 
 .book-desc .overview {
@@ -177,7 +216,7 @@ body {
 }
 
 .contact-info a:hover {
-    color: var(--primary)
+    color: var(--primary);
 }
 
 .contact-info span {
@@ -237,19 +276,19 @@ body {
 }
 
 .search-utils form input {
-    background-color: rgb(246, 246, 246) !important; 
+    background-color: rgb(246, 246, 246) !important;
     padding: 0.75rem;
 }
 
 .search-utils form button {
-    background-color: rgb(246, 246, 246) !important; 
+    background-color: rgb(246, 246, 246) !important;
 }
 
 .search-utils form button:hover {
     color: var(--primary);
 }
 
-.user-info i { 
+.user-info i {
     color: #000;
 }
 
@@ -259,9 +298,9 @@ body {
 
 /* nav bar */
 .navbar .navbar-brand,
-    .navbar .navbar-cart {
-        display: none;
-    }
+.navbar .navbar-cart {
+    display: none;
+}
 
 .navbar .nav-link::after {
     display: none;
@@ -272,7 +311,7 @@ body {
 }
 
 .navbar .nav-link {
-    font-weight:600 ;
+    font-weight: 600;
     position: relative;
 }
 
@@ -304,7 +343,24 @@ body {
     visibility: visible;
     transform: scale(5);
 }
- 
+
+.navbar .img-container img {
+    width: 2rem;
+}
+
+.navbar .scroll-up {
+    color: var(--primary);
+}
+.navbar .scroll-up p {
+    font-size: 0.7rem;
+}
+
+.navbar .img-container,
+.navbar .scroll-up {
+    transition: 0.3s;
+    opacity: 0;
+}
+
 /* header */
 header {
     background-image: url(../images/revslider_1.jpg);
@@ -360,9 +416,25 @@ header {
     color: #fff;
 }
 
-
 /* bestselling list */
+.bestselling .slider {
+    scroll-snap-type: x;
+    scrollbar-width: 0;
+}
 
+.bestselling .slider.dragging {
+    scroll-snap-type: none;
+}
+
+.bestselling .slider > div {
+    scroll-snap-align: start;
+    transition: transform o.3s;
+}
+
+.bestselling .slider.dragging > div {
+    cursor: grab;
+    user-select: none;
+}
 
 /* weekly deals */
 .weekly-deals .deals .banner {
@@ -444,6 +516,14 @@ header {
     background-color: #fef5f5;
 }
 
+.trends .trend-item.third {
+    background-color: #f4fbf2;
+}
+
+.trends .trend-item.fourth {
+    background-color: #fef5f5;
+}
+
 .trends .trend-item .book-desc {
     width: 65%;
 }
@@ -454,13 +534,15 @@ header {
 }
 /* feedback */
 .feedback {
-    background-image: url(../images/h1-bg2.jpg); 
+    background-image: url(../images/h1-bg2.jpg);
     background-size: cover;
 }
 
 .feedback .content {
     margin-top: 9rem;
     border-radius: 1.5rem 1.5rem 0 0;
+    transition: transform 1s;
+    transform: translateX(-1000px)
 }
 
 .feedback .content .carousel-title h2 {
@@ -502,8 +584,8 @@ header {
     background-color: #bbb !important;
     width: 8px;
     height: 8px;
-    border-radius: 4px ;
-    transition: width 0.25s, background-color 0.25s;   
+    border-radius: 4px;
+    transition: width 0.25s, background-color 0.25s;
 }
 
 .feecback .carousel-btn:hover {
@@ -572,7 +654,7 @@ header {
 /* genres */
 .genres button {
     height: fit-content;
-    color: rgba(0, 0, 0, .8);
+    color: rgba(0, 0, 0, 0.8);
     transition: color 0.1s;
 }
 
@@ -589,13 +671,35 @@ header {
     overflow: hidden;
 }
 
+.genres .genre .img-container {
+    overflow: hidden;
+    position: relative;
+}
+
 .genres .genre img {
     transition: transform 0.2s;
-
 }
 
 .genres .genre:hover img {
-    transform: scale(1.1);    
+    transform: scale(1.1);
+}
+
+.genres .swiper .swiper-content {
+    margin: 0 80px;
+    overflow: hidden;
+}
+
+.genres .swiper .swiper-button::after {
+    font-size: 2.2rem;
+}
+
+.genres .swiper .swiper-button {
+    color: #333;
+    transition: color 0.1s;
+}
+
+.genres .swiper .swiper-button:hover {
+    color: var(--primary);
 }
 
 /* authors */
@@ -718,7 +822,6 @@ footer .copyright p a {
     color: var(--primary) !important;
 }
 
-
 /* ------------ Shop page ------------ */
 /* shop title */
 .page-title {
@@ -753,24 +856,24 @@ footer .copyright p a {
 /* sidebar */
 .main-content .genre-list ul li input {
     width: 15px;
-    height: 15px
+    height: 15px;
 }
 
-.main-content  ul li span,
-.main-content  ul li label {
+.main-content ul li span,
+.main-content ul li label {
     font-size: 0.9rem;
     color: #555;
 }
 
-.main-content  ul li label:hover {
-    color: var(--primary); 
+.main-content ul li label:hover {
+    color: var(--primary);
 }
 
-.sidebar  ul li label:hover input {
+.sidebar ul li label:hover input {
     background-color: var(--primary);
 }
 
-.sidebar  ul li label input[type="checkbox"] {
+.sidebar ul li label input[type="checkbox"] {
     background-color: #000;
 }
 
@@ -787,7 +890,7 @@ footer .copyright p a {
 }
 
 .main-content .price-filter .filter i:hover {
-    box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 .main-content .price-filter .price-range {
@@ -796,7 +899,7 @@ footer .copyright p a {
 }
 
 .main-content .price-filter .price-range span {
-    font-size: 0.8rem; 
+    font-size: 0.8rem;
     color: #999;
 }
 
@@ -838,7 +941,7 @@ footer .copyright p a {
 
 /* shop menu */
 .shop-menu .view-options .grid-list button {
-    color: #999
+    color: #999;
 }
 .shop-menu .view-options .grid-list button:hover {
     color: #000;
@@ -864,7 +967,7 @@ footer .copyright p a {
     background-color: var(--primary);
     width: 3rem;
     height: 3rem;
-    position: relative
+    position: relative;
 }
 
 .main-content .menu-items .item .item-price-cart .add-text {
@@ -932,11 +1035,11 @@ footer .copyright p a {
     }
 
     .trends .trend-item .image-container {
-        width: 50%;
+        width: 30%;
     }
 
     .trends .trend-item .book-desc {
-        width: 50%;
+        width: 70%;
     }
 
     .genres .genre:nth-child(3) {
@@ -975,7 +1078,7 @@ footer .copyright p a {
 
     /* weekly deals  */
     .weekly-deals .items {
-        display: flex; 
+        display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
     }
@@ -983,7 +1086,7 @@ footer .copyright p a {
     .weekly-deals .items .item {
         width: 50%;
         margin-top: 1rem;
-    } 
+    }
 
     .weekly-deals .items .item img {
         width: 100%;
@@ -1043,7 +1146,11 @@ footer .copyright p a {
         display: none;
     }
 
-    body > section.genres.my-5 > div.d-flex.align-items-center.my-5 > div > div {
+    body
+        > section.genres.my-5
+        > div.d-flex.align-items-center.my-5
+        > div
+        > div {
         justify-content: center !important;
     }
 }
@@ -1082,15 +1189,13 @@ footer .copyright p a {
     }
 
     .weekly-deals .banner .countdown {
-        font-size: .8rem !important;
+        font-size: 0.8rem !important;
         padding: 0.7rem 1rem;
     }
 
     .trends .trend-item .overview {
-        display:none;
-        
     }
-    
+
     .popular-books .col-lg-3.col-md-4.col-sm-6.border-end {
         border-right: 0 !important;
     }
@@ -1108,7 +1213,7 @@ footer .copyright p a {
     }
 
     footer .site-info {
-        border-right: 0 ;
+        border-right: 0;
     }
 
     footer .contact-info {
@@ -1118,16 +1223,28 @@ footer .copyright p a {
     footer .explore,
     footer .services,
     footer .categories-available {
-        margin-left: 0 !important
+        margin-left: 0 !important;
     }
 
     footer .image-container {
-        width:80%;
+        width: 80%;
         margin-top: 3rem;
     }
     .main-content .menu-items .item button {
         width: 2rem;
         height: 2rem;
         font-size: 0.8rem;
+    }
+
+    .genres .swiper .swiper-content {
+        margin: 0 40px;
+    }
+
+    .genres .swiper .swiper-button-next {
+        margin-right: 0 !important;
+    }
+
+    .genres .swiper .swiper-button-prev {
+        margin-left: 0 !important;
     }
 }
