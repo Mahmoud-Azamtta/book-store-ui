@@ -22,6 +22,7 @@ body {
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
 }
+
 .loader::after {
     content: "";
     box-sizing: border-box;
@@ -50,6 +51,42 @@ body {
 
 body {
     font-family: "Sora", sans-serif;
+}
+
+.main-content .checkbox-label {
+    user-select: none;
+    cursor: pointer;
+}
+
+.main-content ul li input {
+    position: absolute;
+    opacity: 0;
+}
+
+.main-content .checkmark {
+    border: 2px solid #333;
+    width: 17px; 
+    height: 17px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .checkmark:after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transform: scale(0);
+    transition: transform 0.1s;
+}
+
+.main-content ul li input:checked ~ .checkmark::after {
+    transform: scale(1);
 }
 
 .bookory-btn {
@@ -524,11 +561,16 @@ header {
     background-color: #fef5f5;
 }
 
-.trends .trend-item .book-desc {
-    width: 65%;
+.trends .trend-item .overview {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.trends .trend-item h3{
+    font-size: 1rem;
+    color: #333;
 }
 .trends .trend-item .image-container {
-    width: 35%;
     padding: 0;
     border-radius: 1rem;
 }
@@ -583,7 +625,7 @@ header {
 .feedback .carousel-btn {
     background-color: #bbb !important;
     width: 8px;
-    height: 8px;
+    height: 4px;
     border-radius: 4px;
     transition: width 0.25s, background-color 0.25s;
 }
@@ -854,7 +896,7 @@ footer .copyright p a {
 }
 
 /* sidebar */
-.main-content .genre-list ul li input {
+.main-content ul li input {
     width: 15px;
     height: 15px;
 }
@@ -869,13 +911,9 @@ footer .copyright p a {
     color: var(--primary);
 }
 
-.sidebar ul li label:hover input {
-    background-color: var(--primary);
-}
-
-.sidebar ul li label input[type="checkbox"] {
+/* .sidebar ul li label input[type="checkbox"] {
     background-color: #000;
-}
+} */
 
 .main-content .price-filter .filter .line {
     height: 2px;
@@ -939,6 +977,12 @@ footer .copyright p a {
     color: var(--primary) !important;
 }
 
+.main-content .filter-options {
+    overflow: hidden;
+    height: 0;
+    transition: 0.5s;
+}
+
 /* shop menu */
 .shop-menu .view-options .grid-list button {
     color: #999;
@@ -949,16 +993,106 @@ footer .copyright p a {
 .shop-menu .view-options .grid-list .active-view {
     color: #000;
 }
-.shop-menu .view select,
+/* .shop-menu .view select,
 .shop-menu .view select option {
     font-size: 0.8rem;
+} */
+
+
+.shop-menu .view .dropdown {
+    font-size: 0.8rem;
+    position: relative;
+    margin: 0 1em;
+}
+
+.shop-menu .view .items-shown .dropdown {
+    min-width: 4em;
+    margin-left: 0;
+}
+
+.shop-menu .view .sorting .dropdown {
+    min-width: 12em;
+}
+
+.shop-menu .view .dropdown * {
+    box-sizing: border-box;
+}
+
+.shop-menu .view .dropdown .select {
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px transparent solid;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.select-clicked {
+    box-shadow: 0 0 0.5em #999;
+}
+
+.shop-menu .view .dropdown .select:hover {
+    background-color: #eee;
+    border: 1px solid #999;
+}
+
+.shop-menu .view .dropdown .caret {
+    transition: 0.3s;
+}
+
+.shop-menu .view .dropdown .select-menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background-color: #fff;
+    border: 1px solid #999;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #333;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+
+}
+
+.shop-menu .view .dropdown .select-menu li {
+    padding: 0.5em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.shop-menu .view .dropdown .select-menu li:hover {
+     background-color: #eee;
+}
+
+.shop-menu .view .dropdown .select-menu .active {
+    background-color: #ddd !important;
+}
+
+.menu-open {
+    opacity: 1 !important;
+    display: block !important;
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
 }
 
 .shop-menu .view select {
     outline: none;
 }
 
-.shop-menu .view .items-shown span {
+.shop-menu .view .items-shown > span {
     font-size: 0.8rem;
     color: #999;
 }
@@ -990,16 +1124,21 @@ footer .copyright p a {
     background-color: var(--primary) !important;
     color: #fff;
 }
-.main-content .page-indicators button:not(.next) {
+.main-content .page-indicators button:not(.next, .prev) {
     width: 2rem;
     height: 2rem;
     background-color: transparent;
+    font-size: 0.8rem;
 }
 
 .main-content .page-indicators button {
     border-radius: 1rem;
-    font-size: 0.8rem;
     border: none;
+}
+
+.main-content .page-indicators button.prev,
+.main-content .page-indicators button.next {
+    font-size: 0.75rem ;
 }
 
 .main-content .page-indicators button:hover {
@@ -1007,6 +1146,7 @@ footer .copyright p a {
     color: #fff;
 }
 
+.main-content .page-indicators .prev i,
 .main-content .page-indicators .next i {
     font-size: 0.6rem;
 }
@@ -1032,14 +1172,6 @@ footer .copyright p a {
 @media (max-width: 1199.98px) {
     .search-bar .search-utils .btn i {
         margin-left: 1.5rem !important;
-    }
-
-    .trends .trend-item .image-container {
-        width: 30%;
-    }
-
-    .trends .trend-item .book-desc {
-        width: 70%;
     }
 
     .genres .genre:nth-child(3) {
@@ -1096,22 +1228,11 @@ footer .copyright p a {
         margin-top: 1rem !important;
     }
 
-    .trends .trend-item .image-container {
-        width: 30%;
-    }
-
-    .trends .trend-item.second {
-        margin-top: 1.5rem;
-    }
-
     /* popular books */
 
     /* others */
     .others .keep-reading .large .image-container {
         width: 6rem;
-    }
-    .others .keep-reading .large .book-desc .overview {
-        display: none;
     }
 }
 
@@ -1128,14 +1249,6 @@ footer .copyright p a {
 
     .weekly-deals .items .item .book-desc a {
         margin-top: 0rem !important;
-    }
-
-    .trends .trend-item .image-container {
-        width: 40%;
-    }
-
-    .trends .trend-item .book-desc {
-        width: 60%;
     }
 
     .statistics .content span {
@@ -1191,9 +1304,6 @@ footer .copyright p a {
     .weekly-deals .banner .countdown {
         font-size: 0.8rem !important;
         padding: 0.7rem 1rem;
-    }
-
-    .trends .trend-item .overview {
     }
 
     .popular-books .col-lg-3.col-md-4.col-sm-6.border-end {

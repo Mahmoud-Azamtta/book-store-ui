@@ -36,11 +36,11 @@
     </div>
 
     <div class="search-bar border-bottom">
-        <div class="container d-flex justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between gap-4 align-items-center">
             <div class="logo">
                 <img src="assets/images/logo-1.svg" alt="Bookory logo" class="img-fluid">
             </div>
-            <div class="search-utils d-flex justify-content-center align-items-center w-75 px-5">
+            <div class="search-utils d-flex justify-content-center align-items-center w-75">
                 <div class="categories dropdown-center">
                     <button
                         class="btn btn-secondary dropdown-toggle rounded-pill w-100 d-flex justify-content-around align-items-center"
@@ -69,7 +69,7 @@
                     </button>
                 </form>
             </div>
-            <div class="user-info">
+            <div class="user-info d-flex flex-nowrap">
                 <a href="#"><i class="fa-regular fa-user py-1 me-2 pe-2 border-end"></i></a>
                 <a href="#"><i class="fa-regular fa-heart py-1 me-2 pe-2 border-end"></i></a>
                 <a href="#"><i class="fa-solid fa-cart-shopping py-1"></i></a>
@@ -93,6 +93,16 @@
                     <img src="assets/images/no-text-logo.png" alt="bookery logo" class="">
                 </div>
                 <ul class="navbar-nav m-auto">
+                    <li class="nav-item dropdown px-4 d-flex d-lg-none">
+                        <a class="nav-link dropdown-toggle text-black" href="#">
+                            My Profile
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown px-4 d-flex d-lg-none">
+                        <a class="nav-link dropdown-toggle text-black" href="#">
+                            Favorite
+                        </a>
+                    </li>
                     <li class="nav-item dropdown px-4">
                         <a class="nav-link active dropdown-toggle text-black" href="#">
                             Home
@@ -141,9 +151,8 @@
 
     <section class="bestselling my-5">
         <div class="container pt-4 pb-3">
-            <div class="section-title d-flex justify-content-between mb-2">
+            <div class="section-title d-flex justify-content-between mb-2 pb-4 border-bottom">
                 <h2 class="mt-2">Bestselling books</h2>
-                <div class="line"></div>
                 <a href="#" class="bookory-btn d-inline-block p-3 rounded-pill ps-4"><span>View All</span><i
                         class="fa-solid fa-angle-right mx-2"></i></a>
             </div>
@@ -376,9 +385,8 @@
 
     <section class="weekly-deals my-5">
         <div class="container pt-4 pb-3">
-            <div class="section-title d-flex justify-content-between mb-4">
+            <div class="section-title d-flex justify-content-between mb-4 pb-4 border-bottom">
                 <h2 class="mt-2">Deals Of The Week</h2>
-                <div class="line"></div>
                 <a href="#" class="bookory-btn d-inline-block p-3 rounded-pill ps-4"><span>View All</span><i
                         class="fa-solid fa-angle-right mx-2"></i></a>
             </div>
@@ -460,12 +468,10 @@
         </div>
     </section>
 
-    <!-- TODO: make the slider more responsive -->
     <section class="trends my-5 py-5">
         <div class="container ">
-            <div class="section-title d-flex justify-content-between mb-4">
+            <div class="section-title d-flex justify-content-between mb-4 pb-4 border-bottom">
                 <h2 class="mt-2">What's In Trend</h2>
-                <div class="line"></div>
                 <a href="#" class="bookory-btn d-inline-block p-3 rounded-pill ps-4"><span>View All</span><i
                         class="fa-solid fa-angle-right mx-2"></i></a>
             </div>
@@ -474,11 +480,11 @@
             <div class="swiper">
                 <div class="swiper-wrapper row flex-nowrap">
                     <div class="swiper-slide col-lg-6 ms-3">
-                        <div class="trend-item first p-4 mx-1 d-flex">
-                            <div class="image-container">
-                                <img src="assets/images/7.jpg" alt="trending book">
+                        <div class="trend-item first p-4 mx-1 row align-items-center">
+                            <div class="image-container col-xl-5 col-sm-4 col-5">
+                                <img src="assets/images/33.jpg" alt="trending book">
                             </div>
-                            <div class="book-desc ps-4 mt-2">
+                            <div class="book-desc col-xl-7 col-sm-8 col-7 ps-4">
                                 <a href="#" class="d-block mt-3">Over the Woodward Wall</a>
                                 <div class="star-rating my-2">
                                     <i class="fa-solid fa-star"></i>
@@ -488,21 +494,27 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                                 <p class="my-2">A. Deborah Baker</p>
-                                <p class="overview">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid minima soluta pariatur
-                                    recusandae similique fugiat sit ipsa laudantium consectetur! Similique.
+                                <p class="overview mb-1 d-xl-block d-none">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, tempora numquam ratione
+                                    voluptas doloribus facilis beatae. Hic perspiciatis omnis iste debitis dolore nam
+                                    maiores odio.
                                 </p>
                                 <span>$120.00</span>
                             </div>
+                            <h3 class="m-0 mt-4 p-0 text-decoration-underline d-xl-none">Book Overview</h3>
+                            <p class="overview mb-0 p-0 mt-2 col-12 d-xl-none">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid minima soluta pariatur
+                                recusandae similique fugiat sit ipsa laudantium consectetur! Similique.
+                            </p>
                         </div>
                     </div>
                     <div class="swiper-slide col-lg-6">
-                        <div class="trend-item second p-4 mx-1 d-flex">
-                            <div class="image-container">
-                                <img src="assets/images/22.jpg" alt="trending book">
+                        <div class="trend-item second p-4 mx-1 row align-items-center">
+                            <div class="image-container col-xl-5 col-sm-4 col-5">
+                                <img src="assets/images/7.jpg" alt="trending book">
                             </div>
-                            <div class="book-desc ps-4">
-                                <a href="#" class="d-block mt-3">Memorial</a>
+                            <div class="book-desc col-xl-7 col-sm-8 col-7 ps-4">
+                                <a href="#" class="d-block mt-3">Over the Woodward Wall</a>
                                 <div class="star-rating my-2">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -511,22 +523,27 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                                 <p class="my-2">A. Deborah Baker</p>
-                                <p class="overview">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate inventore iure
-                                    eveniet veniam aliquam dolores nostrum nihil accusamus distinctio neque?
+                                <p class="overview mb-1 d-xl-block d-none">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, tempora numquam ratione
+                                    voluptas doloribus facilis beatae. Hic perspiciatis omnis iste debitis dolore nam
+                                    maiores odio.
                                 </p>
-                                <span>$55.00</span>
+                                <span>$120.00</span>
                             </div>
+                            <h3 class="m-0 mt-4 p-0 text-decoration-underline d-xl-none">Book Overview</h3>
+                            <p class="overview mb-0 p-0 mt-2 col-12 d-xl-none">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid minima soluta pariatur
+                                recusandae similique fugiat sit ipsa laudantium consectetur! Similique.
+                            </p>
                         </div>
-
                     </div>
                     <div class="swiper-slide col-lg-6">
-                        <div class="trend-item third second p-4 mx-1 d-flex">
-                            <div class="image-container">
-                                <img src="assets/images/27.jpg" alt="trending book">
+                        <div class="trend-item third p-4 mx-1 row align-items-center">
+                            <div class="image-container col-xl-5 col-sm-4 col-5">
+                                <img src="assets/images/10.jpg" alt="trending book">
                             </div>
-                            <div class="book-desc ps-4">
-                                <a href="#" class="d-block mt-3">Memorial</a>
+                            <div class="book-desc col-xl-7 col-sm-8 col-7 ps-4">
+                                <a href="#" class="d-block mt-3">Over the Woodward Wall</a>
                                 <div class="star-rating my-2">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -535,21 +552,27 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                                 <p class="my-2">A. Deborah Baker</p>
-                                <p class="overview">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate inventore iure
-                                    eveniet veniam aliquam dolores nostrum nihil accusamus distinctio neque?
+                                <p class="overview mb-1 d-xl-block d-none">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, tempora numquam ratione
+                                    voluptas doloribus facilis beatae. Hic perspiciatis omnis iste debitis dolore nam
+                                    maiores odio.
                                 </p>
-                                <span>$55.00</span>
+                                <span>$120.00</span>
                             </div>
+                            <h3 class="m-0 mt-4 p-0 text-decoration-underline d-xl-none">Book Overview</h3>
+                            <p class="overview mb-0 p-0 mt-2 col-12 d-xl-none">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid minima soluta pariatur
+                                recusandae similique fugiat sit ipsa laudantium consectetur! Similique.
+                            </p>
                         </div>
                     </div>
                     <div class="swiper-slide col-lg-6">
-                        <div class="trend-item fourth p-4 mx-1 d-flex">
-                            <div class="image-container">
-                                <img src="assets/images/2.jpg" alt="trending book">
+                        <div class="trend-item fourth p-4 mx-1 row align-items-center">
+                            <div class="image-container col-xl-5 col-sm-4 col-5">
+                                <img src="assets/images/9.jpg" alt="trending book">
                             </div>
-                            <div class="book-desc ps-4">
-                                <a href="#" class="d-block mt-3">Memorial</a>
+                            <div class="book-desc col-xl-7 col-sm-8 col-7 ps-4">
+                                <a href="#" class="d-block mt-3">Over the Woodward Wall</a>
                                 <div class="star-rating my-2">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -558,19 +581,23 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                                 <p class="my-2">A. Deborah Baker</p>
-                                <p class="overview">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate inventore iure
-                                    eveniet veniam aliquam dolores nostrum nihil accusamus distinctio neque?
+                                <p class="overview mb-1 d-xl-block d-none">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, tempora numquam ratione
+                                    voluptas doloribus facilis beatae. Hic perspiciatis omnis iste debitis dolore nam
+                                    maiores odio.
                                 </p>
-                                <span>$55.00</span>
+                                <span>$120.00</span>
                             </div>
+                            <h3 class="m-0 mt-4 p-0 text-decoration-underline d-xl-none">Book Overview</h3>
+                            <p class="overview mb-0 p-0 mt-2 col-12 d-xl-none">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid minima soluta pariatur
+                                recusandae similique fugiat sit ipsa laudantium consectetur! Similique.
+                            </p>
                         </div>
                     </div>
-                </div>
-                </div>
                 </div>
             </div>
-            </div>
+        </div>
     </section>
 
     <section class="feedback my-5">
@@ -623,9 +650,8 @@
 
     <section class="popular-books my-5">
         <div class="container pt-4 pb-3">
-            <div class="section-title d-flex justify-content-between mb-2">
+            <div class="section-title d-flex justify-content-between mb-2 pb-4 border-bottom">
                 <h2 class="mt-2">Popular Books</h2>
-                <div class="line"></div>
                 <a href="#" class="bookory-btn d-inline-block p-3 rounded-pill ps-4"><span>View All</span><i
                         class="fa-solid fa-angle-right mx-2"></i></a>
             </div>
@@ -864,9 +890,8 @@
 
     <section class="genres my-5">
         <div class="container">
-            <div class="section-title d-flex justify-content-between mb-2">
+            <div class="section-title d-flex justify-content-between mb-2 pb-4 border-bottom">
                 <h2 class="mt-2">Genres Books</h2>
-                <div class="line"></div>
                 <a href="#" class="bookory-btn d-inline-block p-3 rounded-pill ps-4"><span>View All</span><i
                         class="fa-solid fa-angle-right mx-2"></i></a>
             </div>
@@ -1229,7 +1254,8 @@
 
     <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="vendor/swiperjs/swiper-bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/bookoryScripts.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
 </body>
 
 </html>

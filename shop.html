@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="vendor/swiperjs/swiper-bundle.min.css">
     <!-- local styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -86,15 +88,18 @@
                 <img src="assets/images/logo-1.svg" alt="Bookory logo" class="img-fluid">
             </a>
             <a href="#" class="navbar-cart"><i class="fa-solid fa-cart-shopping fs-6"></i></a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto m-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown px-4 d-flex">
+            <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarSupportedContent">
+                <div class="img-container d-none">
+                    <img src="assets/images/no-text-logo.png" alt="bookery logo" class="">
+                </div>
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item dropdown px-4">
                         <a class="nav-link dropdown-toggle text-black" href="index.html">
                             Home
                         </a>
                     </li>
                     <li class="nav-item dropdown px-4 d-flex">
-                        <a class="nav-link active dropdown-toggle text-black" href="#">
+                        <a class="nav-link active dropdown-toggle text-black" href="shop.html">
                             Shop
                         </a>
                     </li>
@@ -116,6 +121,10 @@
                         <a class="nav-link text-black" href="#">Contact</a>
                     </li>
                 </ul>
+                <button class="scroll-up border-0 bg-transparent d-none flex-column justify-content-center align-items-center">
+                    <i class="fa-solid fa-angle-up fa-bounce"></i>
+                    <p class="m-0">Scroll up</p>
+                </button>
             </div>
         </div>
     </nav>
@@ -134,7 +143,7 @@
     <section class="main-content my-5">
         <div class="container py-3">
             <div class="row">
-                <div class="col-lg-3 d-lg-block d-none">
+                <div class="sidebar-wrapper col-lg-3 d-lg-block d-none">
                     <div class="sidebar-genre">
                         <div class="sidebar-title border p-4 rounded-top-4">
                             <h2 class="fs-6 fw-bold m-0 ms-3">Genre</h2>
@@ -142,99 +151,99 @@
                         <div class="genre-list border border-top-0 rounded-bottom-4 p-4">
                             <ul class="list-unstyled ms-3 mb-0">
                                 <li class="mb-2">
-                                    <label for="action-adventure" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="action-adventure" name="action-and-adventure" value="action-and-adventure">
+                                    <label for="action-adventure" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="action-adventure" name="action-and-adventure" value="Action & Adventure">
                                         <div class="checkmark"></div>
                                         Action & Adventure
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="activity" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="activity" name="activity" value="activity">
+                                    <label for="activity" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="activity" name="activity" value="Activity">
                                         <div class="checkmark"></div>
                                         Activity
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="animals" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="animals" name="animals" value="animals">
+                                    <label for="animals" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="animals" name="animals" value="Animals">
                                         <div class="checkmark"></div>
                                         Animals
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="action-adventure " class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="art" name="art" value="art">
+                                    <label for="art" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="art" name="art" value="Art & Litreture">
                                         <div class="checkmark"></div>
                                         Art & Litreture
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="anthologies" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="anthologies" name="anthologies" value="anthologies">
+                                    <label for="anthologies" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="anthologies" name="anthologies" value="Anthologies">
                                         <div class="checkmark"></div>
                                         Anthologies
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="cars" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="cars" name="cars" value="cars">
+                                    <label for="cars" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="cars" name="cars" value="Cars">
                                         <div class="checkmark"></div>
                                         Cars & Trucks
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="classic" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="classic" name="classic" value="classic">
+                                    <label for="classic" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="classic" name="classic" value="Classics">
                                         <div class="checkmark"></div>
                                         Classics
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="contemporary" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="contemporary" name="contemporary" value="contemporary">
+                                    <label for="contemporary" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="contemporary" name="Contemporary" value="contemporary">
                                         <div class="checkmark"></div>
                                         Contemporary
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="action-adventure" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="caltural" name="caltural" value="caltural">
+                                    <label for="caltural" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="caltural" name="caltural" value="Caltural">
                                         <div class="checkmark"></div>
-                                        Action & Adventure
+                                        Cultural
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="european" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="european" name="european" value="european">
+                                    <label for="european" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="european" name="european" value="European">
                                         <div class="checkmark"></div>
                                         European
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="foreign" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="foreign" name="foreign" value="foreign">
+                                    <label for="foreign" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="foreign" name="foreign" value="Foreign Language">
                                         <div class="checkmark"></div>
                                         Foreign Language
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="fiction" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="fiction" name="fiction" value="fiction">
+                                    <label for="fiction" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="fiction" name="fiction" value="Fiction">
                                         <div class="checkmark"></div>
                                         Fiction
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="historical" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="historical" name="historical" value="historical">
+                                    <label for="historical" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="historical" name="historical" value="Historical">
                                         <div class="checkmark"></div>
                                         Historical
                                     </label>
                                 </li>
                                 <li class="d-flex align-items-center gap-2 mb-2">
-                                    <label for="uncategorized" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="uncategorized" name="uncategorized" value="uncategorized">
+                                    <label for="uncategorized" class="checkBox checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox"  id="uncategorized" name="uncategorized" value="Uncategorized">
                                         <div class="checkmark"></div>
                                         Uncategorized
                                     </label>
@@ -248,57 +257,57 @@
                         </div>
                         <div class="authors-list border border-top-0 rounded-bottom-4 p-4">
                             <ul class="list-unstyled ms-3 mb-0">
-                                <li class="d-flex justify-content-between mb-2">
-                                    <label for="action-adventure" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="action-adventure" name="action-and-adventure" value="action-and-adventure">
+                                <li class="checkbox-label d-flex justify-content-between mb-2">
+                                    <label for="arthur-gonzalez" class="d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="arthur-gonzalez" name="arthur-gonzalez" value="Arthur Conzalez">
                                         <div class="checkmark"></div>
-                                        Arthur Gonzalez
+                                        Arthur Conzalez
                                     </label>
                                     <span>(1)</span>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <label for="activity" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="activity" name="activity" value="activity">
+                                    <label for="dana-chambers" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="dana-chambers" name="dana-chambers" value="Dana Chambers">
                                         <div class="checkmark"></div>
                                         Dana Chambers
                                     </label>
                                     <span>(1)</span>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <label for="animals" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="animals" name="animals" value="animals">
+                                    <label for="ernesto-wade" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="ernesto-wade" name="ernesto-wade" value="Ernseto Wade">
                                         <div class="checkmark"></div>
                                         Ernesto Wade 
                                     </label>
                                     <span>(2)</span>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <label for="action-adventure " class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="art" name="art" value="art">
+                                    <label for="karla-newman" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="karla-newman" name="karla-newman" value="Karla Newman">
                                         <div class="checkmark"></div>
                                         Karla Newman
                                     </label>
                                     <span>(2)</span>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <label for="anthologies" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="anthologies" name="anthologies" value="anthologies">
+                                    <label for="misty-figueroa" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="misty-figueroa" name="misty-figueroa" value="Misty Figueroa">
                                         <div class="checkmark"></div>
                                         Misty Figueroa
                                     </label>
                                     <span>(2)</span>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <label for="cars" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="cars" name="cars" value="cars">
+                                    <label for="rita-james" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="rita-james" name="rita-james" value="Rita James">
                                         <div class="checkmark"></div>
                                         Rita James
                                     </label>
                                     <span>(1)</span>
                                 </li>
                                 <li class="d-flex justify-content-between mb-2">
-                                    <label for="classic" class="d-flex align-items-center gap-2">
-                                        <input type="checkbox" id="classic" name="classic" value="classic">
+                                    <label for="suzanne-casey" class="checkbox-label d-flex align-items-center gap-2">
+                                        <input type="checkbox" id="suzanne-casey" name="suzanne-casey" value="Suzanne Casey">
                                         <div class="checkmark"></div>
                                         Suzanne Casey
                                     </label>
@@ -366,309 +375,104 @@
                             <h2 class="fs-6 fw-bold m-0 ms-3">Featured Books</h2>
                         </div>
                         <div class="featured-list border border-top-0 rounded-bottom-4 p-4">
-                            <div class="row">
-                                <div class="col-4">
+                            <div class="row align-items-center">
+                                <div class="col-xl-3 col-lg-4 col-3">
                                     <div class="book-cover">
                                         <img src="assets/images/35.jpg" alt="long live the post horn cover" class="w-100 rounded-3">
                                     </div>
                                 </div>
-                                <div class="col-7 p-0 ps-1">
-                                    <a href="#" class="book-title d-block text-decoration-none text-black fw-bold mt-2">Long Live the Post Horn</a>
+                                <div class="col-xl-9 col-lg-8 col-9 p-0 ps-1">
+                                    <a href="#" class="book-title m-0 d-block text-decoration-none text-black fw-bold mt-2">Long Live the Post Horn</a>
                                     <a href="#" class="author d-block text-decoration-none mt-2">Action & Adventure</a>
                                 </div>
                             </div>          
-                            <div class="row mt-3">
-                                <div class="col-4">
+                            <div class="row mt-3 align-items-center">
+                                <div class="col-xl-3 col-lg-4 col-3">
                                     <div class="book-cover">
                                         <img src="assets/images/33.jpg" alt="over the woodward wall cover" class="w-100 rounded-3">
                                     </div>
                                 </div>
-                                <div class="col-6 p-0 ps-1">
-                                    <a href="#" class="book-title d-block text-decoration-none text-black fw-bold mt-2">Over the Woodward Wall</a>
+                                <div class="col-xl-9 col-lg-8 col-9 p-0 ps-1">
+                                    <a href="#" class="book-title m-0 d-block text-decoration-none text-black fw-bold mt-2">Over the Woodward Wall</a>
                                     <a href="#" class="author d-block text-decoration-none mt-2">Action & Adventure</a>
                                 </div>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-4">
+                            <div class="row mt-3 align-items-center">
+                                <div class="col-xl-3 col-lg-4 col-3">
                                     <div class="book-cover">
                                         <img src="assets/images/34.jpg" alt="Piranesi" class="w-100 rounded-3">
                                     </div>
                                 </div>
-                                <div class="col-6 p-0 ps-1">
-                                    <a href="#" class="book-title d-block text-decoration-none text-black fw-bold mt-2">Piranesi</a>
+                                <div class="col-xl-9 col-lg-8 col-9 p-0 ps-1">
+                                    <a href="#" class="book-title m-0 d-block text-decoration-none text-black fw-bold mt-2">Piranesi</a>
                                     <a href="#" class="author d-block text-decoration-none mt-2">Action & Adventure</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-12">
+                <div class="shop-menu-wrapper col-lg-9 col-12">
                     <div class="shop-menu">
                         <div class="view-options d-flex justify-content-lg-between justify-content-sm-around justify-content-between border-bottom pb-2 mt-3">
-                            <div class="grid-list">
+                            <div class="grid-list d-flex justify-content-center align-items-center">
                                 <button class="border-0 bg-transparent p-0 active-view d-lg-inline d-none"><i class="fa-solid fa-border-all"></i></button>
                                 <button class="border-0 bg-transparent p-0 ms-2 d-lg-inline d-none"><i class="fa-solid fa-list-ul"></i></button>
-                                <button class="border-0 bg-transparent d-flex align-items-center gap-2 p-0 d-lg-none">
-                                    <embed src="assets/svgs/filter.svg" type="image/svg+xml">
-                                    <span class="text-black">Filter</span>
+                                <button class="show-filters border-0 bg-transparent d-flex align-items-center gap-2 p-0 d-lg-none">
+                                    <img src="assets/svgs/filter.svg" alt="">
+                                    <span class="text-black d-sm-inline d-none">Filter</span>
                                 </button>
                             </div>
                             <div class="view d-flex">
                                 <div class="sorting">
-                                    <select name="sort" id="sort" class="bg-transparent border-0 text-end">
-                                        <option selected value="default">Default sorting</option>
-                                        <option value="popularity">Sort by popularity</option>
-                                        <option value="latest">Sort by latest</option>
-                                        <option value="low-to-high">Price: low to high</option>
-                                        <option value="high-to-low">Price: high to low</option>
-                                    </select>
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span class="selected">
+                                                Default sorting
+                                            </span>
+                                            <div class="caret">
+                                                <i class="fa-solid fa-angle-down"></i>
+                                            </div>
+                                        </div>
+                                        <ul class="select-menu">
+                                            <li id="default-sort" value="default-sort" class="active">Default sorting</li>
+                                            <li id="rating-sort" value="rating-sort">Sort by rating</li>
+                                            <li id="low-to-high" value="low-to-high">Price: low to high</li>
+                                            <li id="high-to-low" value="high-to-low">Price: high to low</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="items-shown ms-4">
+                                <div class="items-shown ms-2">
                                     <span>Show:</span>
-                                    <select class="bg-transparent border-0" aria-label="">
-                                        <option selected value="1">8</option>
-                                        <option value="2">16</option>
-                                        <option value="3">24</option>
-                                    </select>
+                                    <div class="dropdown d-inline-block">
+                                        <div class="select">
+                                            <span class="selected">
+                                                9
+                                            </span>
+                                            <div class="caret">
+                                                <i class="fa-solid fa-angle-down"></i>
+                                            </div>
+                                        </div>
+                                        <ul class="select-menu">
+                                            <li class="active">9</li>
+                                            <li>15</li>
+                                            <li>21</li>
+                                            <li>33</li>
+                                        </ul>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="filter-options d-lg-none">
+                            <div class="row mb-4 pb-4 border-bottom">
+
                             </div>
                         </div>
                         <div class="menu-items">
                             <div class="row row-cols-lg-3 row-cols-md-3 row-cols-2">
-                                <div class="col mt-3 border-end">
-                                    <div class="item mt-3">
-                                        <div class="img-container">
-                                            <a href="#"><img src="assets/images/2.jpg" alt="the beast's heart cover"></a>
-                                        </div>
-                                        <div class="book-desc">
-                                            <a href="#" class="d-block mt-3">Over the Woodward Wall</a>
-                                            <div class="star-rating my-2">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <p class="my-2">A. Deborah Baker</p>
-                                            <div class="item-price-cart d-flex justify-content-between align-items-center">
-                                                <span>$120.00</span>
-                                                <button class="add-item text-white text-center rounded-circle border-0">
-                                                    <span class="add-text d-inline-block rounded-pill px-2 position-absolute">Add to cart</span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mt-3 border-end">
-                                    <div class="item mt-3">
-                                        <div class="img-container">
-                                            <a href="#"><img src="assets/images/6.jpg" alt="In the garden of the fugitives"></a>
-                                        </div>
-                                        <div class="book-desc">
-                                            <a href="#" class="d-block mt-3">Over the Woodward Wall</a>
-                                            <div class="star-rating my-2">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <p class="my-2">A. Deborah Baker</p>
-                                            <div class="item-price-cart d-flex justify-content-between align-items-center">
-                                                <span>$120.00</span>
-                                                <button class="add-item text-white text-center rounded-circle border-0">
-                                                    <span class="add-text d-inline-block rounded-pill px-2 position-absolute">Add to cart</span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mt-3 border-end">
-                                    <div class="item mt-3">
-                                        <div class="img-container">
-                                            <a href="#"><img src="assets/images/13.jpg" alt="The standardization demoralization procedures cover"></a>
-                                        </div>
-                                        <div class="book-desc">
-                                            <a href="#" class="d-block mt-3">The Standardization Demoralization Procedures</a>
-                                            <div class="star-rating my-2">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <p class="my-2">Jennifer Hofmann</p>
-                                            <div class="item-price-cart d-flex justify-content-between align-items-center">
-                                                <span>$120.00</span>
-                                                <button class="add-item text-white text-center rounded-circle border-0">
-                                                    <span class="add-text d-inline-block rounded-pill px-2 position-absolute">Add to cart</span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mt-3 border-end">
-                                    <div class="item mt-3">
-                                        <div class="img-container">
-                                            <a href="#"><img src="assets/images/11.jpg" alt="The illness lesson"></a>
-                                        </div>
-                                        <div class="book-desc">
-                                            <a href="#" class="d-block mt-3">Illness Lesson</a>
-                                            <div class="star-rating my-2">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <p class="my-2">Clare Beams</p>
-                                            <div class="item-price-cart d-flex justify-content-between align-items-center">
-                                                <span>$120.00</span>
-                                                <button class="add-item text-white text-center rounded-circle border-0">
-                                                    <span class="add-text d-inline-block rounded-pill px-2 position-absolute">Add to cart</span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mt-3 border-end">
-                                    <div class="item mt-3">
-                                        <div class="img-container">
-                                            <a href="#"><img src="assets/images/16.jpg" alt="A cetain hunger "></a>
-                                        </div>
-                                        <div class="book-desc">
-                                            <a href="#" class="d-block mt-3">A Certain Hunger</a>
-                                            <div class="star-rating my-2">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <p class="my-2">Chelsea G. Summers</p>
-                                            <div class="item-price-cart d-flex justify-content-between align-items-center">
-                                                <span>$120.00</span>
-                                                <button class="add-item text-white text-center rounded-circle border-0">
-                                                    <span class="add-text d-inline-block rounded-pill px-2 position-absolute">Add to cart</span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mt-3 border-end">
-                                    <div class="item mt-3">
-                                        <div class="img-container">
-                                            <a href="#"><img src="assets/images/12.jpg" alt="grown"></a>
-                                        </div>
-                                        <div class="book-desc">
-                                            <a href="#" class="d-block mt-3">Grown</a>
-                                            <div class="star-rating my-2">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <p class="my-2">Tiffany D. Jackson</p>
-                                            <div class="item-price-cart d-flex justify-content-between align-items-center">
-                                                <span>$120.00</span>
-                                                <button class="add-item text-white text-center rounded-circle border-0">
-                                                    <span class="add-text d-inline-block rounded-pill px-2 position-absolute">Add to cart</span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mt-3 border-end">
-                                    <div class="item mt-3">
-                                        <div class="img-container">
-                                            <a href="#"><img src="assets/images/7.jpg" alt="The feather thief cover"></a>
-                                        </div>
-                                        <div class="book-desc">
-                                            <a href="#" class="d-block mt-3">The feather thief</a>
-                                            <div class="star-rating my-2">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <p class="my-2">Kirk Wallace Johnson</p>
-                                            <div class="item-price-cart d-flex justify-content-between align-items-center">
-                                                <span>$120.00</span>
-                                                <button class="add-item text-white text-center rounded-circle border-0">
-                                                    <span class="add-text d-inline-block rounded-pill px-2 position-absolute">Add to cart</span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mt-3 border-end">
-                                    <div class="item mt-3">
-                                        <div class="img-container">
-                                            <a href="#"><img src="assets/images/4.jpg" alt="A light so lovely"></a>
-                                        </div>
-                                        <div class="book-desc">
-                                            <a href="#" class="d-block mt-3">A light so lovely</a>
-                                            <div class="star-rating my-2">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <p class="my-2">Sarah Arthur</p>
-                                            <div class="item-price-cart d-flex justify-content-between align-items-center">
-                                                <span>$120.00</span>
-                                                <button class="add-item text-white text-center rounded-circle border-0">
-                                                    <span class="add-text d-inline-block rounded-pill px-2 position-absolute">Add to cart</span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mt-3 border-end">
-                                    <div class="item mt-3">
-                                        <div class="img-container">
-                                            <a href="#"><img src="assets/images/9.jpg" alt="Helium"></a>
-                                        </div>
-                                        <div class="book-desc">
-                                            <a href="#" class="d-block mt-3">Helium</a>
-                                            <div class="star-rating my-2">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <p class="my-2">Rudy Francisco</p>
-                                            <div class="item-price-cart d-flex position-relative justify-content-between align-items-center">
-                                                <span>$120.00</span>
-                                                <button class="add-item text-white text-center rounded-circle border-0">
-                                                    <span class="add-text d-inline-block rounded-pill px-2 position-absolute">Add to cart</span>   
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                    
                     </div>
                     <div class="page-indicators d-flex gap-1 justify-content-center mt-5">
-                        <button class="active-page">1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button class="next text-uppercase px-3 d-flex align-items-center">next <i class="fa-solid fa-chevron-right ms-1"></i></button>
                     </div>
                 </div>
             </div>
@@ -754,7 +558,9 @@
     </footer>
 
     <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/shop.js"></script>
+    <script src="vendor/swiperjs/swiper-bundle.min.js"></script>
+    <script type="module" src="assets/js/bookoryScripts.js"></script>
+    <script type="module" src="assets/js/shop.js"></script>
 </body>
 
 </html>

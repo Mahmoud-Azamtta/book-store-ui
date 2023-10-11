@@ -1,0 +1,332 @@
+[
+    {
+        "bookId": 1,
+        "bookTitle": "No Place Like Here",
+        "author": "Misty Figueroa",
+        "rating": 3.5,
+        "genre": "Action & Adventure",
+        "cost": 43.00,
+        "bookCover": "assets/images/1.jpg",
+        "overview": "ashlyn zanotti has big plans for the summer. she's just spent a year at boarding school and can't wait to get home. but when ashlyn's father is arrested for tax evasion and her mother enters a rehab facility for “exhaustion,” a.k.a. depression, her life is turned upside down."
+    },
+    {
+        "bookId": 2,
+        "bookTitle": "The Beast's Heart",
+        "author": "Arthur Conzalez",
+        "rating": 4,
+        "cost": 22.00,
+        "genre": "Activity",
+        "bookCover": "assets/images/2.jpg",
+        "overview": "The story is told by the Beast, cursed long ago by a Fairy and doomed to live out his life as a monster, unless he can figure out a way to break the spell. He has been living as a wild animal in the forests surrounding his castle for years, having all but forgotten his life as a man"
+    },
+    {
+        "bookId": 3,
+        "bookTitle": "Blue is a Darkness Weakened By Light",
+        "author": "Rita James",
+        "rating": 3,
+        "cost": 35.00,
+        "genre": "Animals",
+        "bookCover": "assets/images/3.jpg",
+        "overview": "Sarah McCarry's Blue is a Darkness Weakened by Light is about a lonely young woman, recently moved to the big city, who is looking for love. What she finds is a friend and confidante who is much older and wiser than she."
+    },
+    {
+        "bookId": 4,
+        "bookTitle": "A Light So Lovely",
+        "author": "Karla Newman",
+        "rating": 3,
+        "cost": 15.25,
+        "genre": "Art & Litreture",
+        "bookCover": "assets/images/4.jpg",
+        "overview": "A Light So Lovely tells the story of the woman at the center of it all - her imagination, her faith, her pattern of defying categories, and what readers today can learn from her legacy."
+    },
+    {
+        "bookId": 5,
+        "bookTitle": "A Place Called Perfect",
+        "author": "Ernesto Wade",
+        "rating": 4,
+        "cost": 18.50,
+        "genre": "Anthologies",
+        "bookCover": "assets/images/5.jpg",
+        "overview": "Who wants to live in a town where everyone has to wear glasses to stop them going blind? And who wants to be perfectly behaved all the time? Violet quickly discovers there's something weird going on, and when she meets Boy she realizes that the mysterious Watchers are guarding a perfectly creepy secret!"
+    },
+    {
+        "bookId": 6,
+        "bookTitle": "In The Garden of The Fugitives",
+        "author": "Arthur Conzalez",
+        "rating": 5,
+        "cost": 31.75,
+        "genre": "Classics",
+        "bookCover": "assets/images/6.jpg",
+        "overview": "Royce largely recounts his unrequited relationship with Kitty Lushington, a college friend whom he followed to Pompeii during the 1970s as she pursued archaeological research at the Garden of the Fugitives, where 13 ancient bodies were entombed under the rain of volcanic ash."
+    },
+    {
+        "bookId": 7,
+        "bookTitle": "The Feather Thief",
+        "author": "Dana Chambers",
+        "rating": 3.5,
+        "cost": 44.00,
+        "genre": "Contemporary",
+        "bookCover": "assets/images/7.jpg",
+        "overview": "In 2009, Edwin Rist, an American student at London’s Royal Academy of Music, stole 299 rare and scientifically significant bird skins from the Natural History Museum at Tring, in Hertfordshire, England, plucked their feathers, and sold them for top dollar to men who shared his obsession with the Victorian art of salmon-fly tying. Johnson explores the expensive and exotic hobby of salmon-fly tying that emerged in the 19th century and uses that context to frame Rist’s story, including his trial. Rist did not serve jail time after his lawyers successfully argued that Asperger’s syndrome was to blame for his crime. In the book’s final section, Johnson goes deep into the exotic bird and feather trade and concludes that though obsession and greed know no bounds, they certainly make for a fascinating tale. The result is a page-turner that will likely appeal to science, history, and true crime readers."
+    },
+    {
+        "bookId": 8,
+        "bookTitle": "Dune",
+        "author": "Suzanne Casey",
+        "rating": 5,
+        "cost": 60.50,
+        "genre": "Cultural",
+        "bookCover": "assets/images/8.jpg",
+        "overview": "Dune, science-fiction novel by American author Frank Herbert, serialized in Analog from 1963 to 1965 and then published in book form later in 1965. Dune follows young nobleman Paul Atreides through adversity to his destiny as a messianic leader on the arid desert planet Arrakis."
+    },
+    {
+        "bookId": 9,
+        "bookTitle": "Helium",
+        "author": "Misty Figueroa",
+        "rating": 4.5,
+        "cost": 57.25,
+        "genre": "European",
+        "bookCover": "assets/images/9.jpg",
+        "overview": "Helium is filled with work that is simultaneously personal and political, blending love poems, self-reflection, and biting cultural critique on class, race and gender into an unforgettable whole. Ultimately, Rudy's work rises above the chaos to offer a fresh and positive perspective of shared humanity and beauty."
+    },
+    {
+        "bookId": 10,
+        "bookTitle": "Clap When You Land",
+        "author": "Karla Newman",
+        "rating": 4,
+        "cost": 57.25,
+        "genre": "Foreign Language",
+        "bookCover": "assets/images/10.jpg",
+        "overview": "A novel-in-verse that explores the intricacies of love and mourning. Clap When You Land tells the story of Camino and Yahaira, two sisters whose fates become intertwined when a tragic accident forces them to discover the truth about their father—and each other."
+    },
+    {
+        "bookId": 11,
+        "bookTitle": "Illness Lesson",
+        "author": "Arthur Conzalez",
+        "rating": 2,
+        "cost": 105.00,
+        "genre": "Historical",
+        "bookCover": "assets/images/11.jpg",
+        "overview": "The Illness Lesson takes place at a progressive 19th century school for young ladies, where the students begin to show signs of a mysterious affliction. Are the girls faking? Is it a psychosomatic contagion? Or are they really sick?"
+    },
+    {
+        "bookId": 12,
+        "bookTitle": "Grown",
+        "author": "Suzanne Casey",
+        "rating": 3,
+        "cost": 10.25,
+        "genre": "Action & Adventure",
+        "bookCover": "assets/images/12.jpg",
+        "overview": " ripped-from-the-headlines story about sexual exploitation, the dark crimes of celebrity elites, and the power of silence and speaking up, Grown is set in the modern day and uses a nonlinear plot to explore the uncomfortable conversation at the heart of the #MeToo movement against sexual abuse and harassment."
+    },
+    {
+        "bookId": 13,
+        "bookTitle": "The Standardization of Demoralization Prodecures",
+        "author": "Dana Chambers",
+        "rating": 2.5,
+        "cost": 52.75,
+        "genre": "Activity",
+        "bookCover": "assets/images/13.jpg",
+        "overview": "Set in the final, turbulent days of the Cold War, The Standardization of Demoralization Procedures blends the high-wire espionage of John le Carré with the brilliant absurdist humor of Milan Kundera to evoke the dehumanizing forces that turned neighbor against neighbor and friend against friend."
+    },
+    {
+        "bookId": 14,
+        "bookTitle": "Guide to Slaying Vampires",
+        "author": "Ernesto Wade",
+        "rating": 3.5,
+        "cost": 120.25,
+        "genre": "Animals",
+        "bookCover": "assets/images/14.jpg",
+        "overview": "The Southern Book Club's Guide to Slaying Vampires is about a women's book club trying to protect its Southern suburban community from a mysterious and handsome stranger who turns out to be a vampire. Patricia Campbell's life has become smaller and smaller after she gave up her job as a nurse to marry an ambitious doctor and become a mother. Luckily, she has her book club to look forward to. They consist of Charleston mothers who love to read true crime and suspense novels. When an artistic and sensitive stranger named James Harris moves into the neighborhood, Patricia is initially attracted to him. However, once some children go missing, she begins to suspect that the newcomer has something to do with it. She starts her own investigation, yet what she discovers is far more terrifying than she could imagine. Soon, she and her book club are the only ones standing between the monster they've invited into their homes and the unsuspecting community they've sworn to protect."
+    },
+    {
+        "bookId": 15,
+        "bookTitle": "A Certain Hunger",
+        "author": "Dana Chambers",
+        "rating": 4,
+        "cost": 134.00,
+        "genre": "Art & Litreture",
+        "bookCover": "assets/images/16.jpg",
+        "overview": "The book follows food writer Dorothy Daniels, who is also a convicted serial killer. Daniels narrates the story of her crimes from prison, moving back and forth in time between her life behind bars and the life that led to her imprisonment: specifically the food she ate, including eating men."
+    },
+    {
+        "bookId": 16,
+        "bookTitle": "The Knockout Queen",
+        "author": "Arthur Conzalez",
+        "rating": 4,
+        "cost": 87.50,
+        "genre": "Classics",
+        "bookCover": "assets/images/17.jpg",
+        "overview": "At six foot three, Bunny towers over their classmates. Even as she dreams of standing out and competing in the Olympics, she is desperate to fit in, to seem normal, and to get a boyfriend, all while hiding her father's escalating alcoholism. Michael has secrets of his own."
+    },
+    {
+        "bookId": 17,
+        "bookTitle": "A Burning",
+        "author": "Suzanne Casey",
+        "rating": 5,
+        "cost": 49.25,
+        "genre": "Contemporary",
+        "bookCover": "assets/images/18.jpg",
+        "overview": "A Burning follows three characters in the aftermath of a terrorist attack at a railroad station in a Kolkata slum. Jivan is accused of aiding the terrorists, when really her only crimes are writing anti-government Facebook posts and being in the wrong place at the wrong time."
+    },
+    {
+        "bookId": 18,
+        "bookTitle": "Lobizona",
+        "author": "Suzanne Casey",
+        "rating": 3,
+        "cost": 26.50,
+        "genre": "Cultural",
+        "bookCover": "assets/images/19.jpg",
+        "overview": "As an undocumented immigrant who's on the run from her father's Argentine crime-family, Manu is confined to a small apartment and a small life in Miami, Florida. Until Manu's protective bubble is shattered. Her surrogate grandmother is attacked, lifelong lies are exposed, and her mother is arrested by ICE."
+    },
+    {
+        "bookId": 19,
+        "bookTitle": "Woven in Moonlight",
+        "author": "Rita James",
+        "rating": 3.5,
+        "cost": 26.50,
+        "genre": "European",
+        "bookCover": "assets/images/20.jpg",
+        "overview": "Woven in Moonlight is a nuanced and empathetic fantasy inspired by Bolivian folklore, history and politics. Ximena is a kind and strong protagonist whose experiences challenge her to outgrow her prejudice and desire for vengeance."
+    },
+    {
+        "bookId": 20,
+        "bookTitle": "Lidia Stories",
+        "author": "Rita James",
+        "rating": 2,
+        "cost": 15.25,
+        "genre": "Foreign Language",
+        "bookCover": "assets/images/21.jpg",
+        "overview": "ashlyn zanotti has big plans for the summer. she's just spent a year at boarding school and can't wait to get home. but when ashlyn's father is arrested for tax evasion and her mother enters a rehab facility for “exhaustion,” a.k.a. depression, her life is turned upside down."
+    },
+    {
+        "bookId": 21,
+        "bookTitle": "Mexican Gothic",
+        "author": "Misty Figueroa",
+        "rating": 4.5,
+        "cost": 124.25,
+        "genre": "Historical",
+        "bookCover": "assets/images/22.jpg",
+        "overview": "Mexican Gothic is a feminist Gothic novel by Mexican writer Silvia Moreno-Garcia, who currently resides in Canada. Set in 1950s Mexico City and the burned-out mining town of El Triunfo, the novel is a horror-tinged thriller in which Noemí Taboada, a socialite with aspirations to become an anthropologist, goes to El Triunfo to rescue her cousin Catalina from the Doyles. The Doyles are an impoverished family of English silver barons who have united with a sentient fungus to ensure immortality for the family's patriarch, Howard Doyle. The novel has garnered critical praise for Moreno-Garcia, a past winner of the World Fantasy Award and finalist for the Aurora, British Fantasy, Nebula, and Locus awards. This guide is based on the 2020 Del Rey print edition."
+    },
+    {
+        "bookId": 22,
+        "bookTitle": "A Lover's Discourse",
+        "author": "Karla Newman",
+        "rating": 3,
+        "cost": 75.00,
+        "genre":"Action & Adventure",
+        "bookCover": "assets/images/23.jpg",
+        "overview": "Guessing what's on a lover's mind might seem an easy task: a romantic infatuation, being in love - these common psychological states are familiar to most of us. However, if we look at love from a theoretical point of view, we might ask ourselves: if love is indeed so common, can one find a shared inner emotional language? Is there even such a thing as an emotional language? These are the questions that Roland Barthes addresses in his A Lover's Discourse - a philosophical meditation at times bordering on fiction."
+    },
+    {
+        "bookId": 23,
+        "bookTitle": "Apple Skin to The Core",
+        "author": "Arthur Conzalez",
+        "rating": 5,
+        "cost": 130.25,
+        "genre": "Activity",
+        "bookCover": "assets/images/24.jpg",
+        "overview": "The story of his family, of Onondaga among Tuscaroras, of Native folks everywhere. From the horrible legacy of the government boarding schools, to a boy watching his siblings leave and return and leave again, to a young man fighting to be an artist who balances multiple worlds."
+    },
+    {
+        "bookId": 24,
+        "bookTitle": "Memorial",
+        "author": "Misty Figueroa",
+        "rating": 4.5,
+        "cost": 26.75,
+        "genre": "Anthologies",
+        "bookCover": "assets/images/26.jpg",
+        "overview": "Benson and Mike are two young guys who live together in Houston. Mike is a Japanese American chef at a Mexican restaurant and Benson's a Black day care teacher, and they've been together for a few years—good years—but now they're not sure why they're still a couple."
+    },
+    {
+        "bookId": 25,
+        "bookTitle": "Luster",
+        "author": "Dana Chambers",
+        "rating": 3,
+        "cost": 94.50,
+        "genre": "Art & Litreture",
+        "bookCover": "assets/images/27.jpg",
+        "overview": "Luster follows a young woman called Edie – having left a trail of questionable decisions behind her and not much fulfilment in her life, when she meets Eric, a married man in an open relationship, Edie's curiosity gets the better of her."
+    },
+    {
+        "bookId": 26,
+        "bookTitle": "Sad Janet",
+        "author": "Suzanne Casey",
+        "rating": 4,
+        "cost": 82.25,
+        "genre": "Classics",
+        "bookCover": "assets/images/28.jpg",
+        "overview": "When her family stages an intervention, her boyfriend leaves, and the prospect of making it through Christmas alone seems like too much, Janet decides to give them what they want."
+    },
+    {
+        "bookId": 27,
+        "bookTitle": "The Scapegracers",
+        "author": "Karla Newman",
+        "rating": 4.5,
+        "cost": 140.00,
+        "genre": "Contemporary",
+        "bookCover": "assets/images/29.jpg",
+        "overview": "The Scapegracers is about Sideways Pike, a lesbian witch, who finds herself the new member of a friendship group with a popular clique of girls after she does magic with them at a Halloween party. Then things start to get weird, involving a curse on a boy, a cute girl, and a creepy family of witch hunters."
+    },
+    {
+        "bookId": 28,
+        "bookTitle": "Each of Us a Desert",
+        "author": "Misty Figueroa",
+        "rating": 3.5,
+        "cost": 59.75,
+        "genre": "Cultural",
+        "bookCover": "assets/images/30.jpg",
+        "overview": "Xochital is destined to wander the desert alone, speaking her troubled village's stories into its arid winds. Her only companions are the blessed stars above and enimagic lines of poetry magically strewn across dusty dunes. Her one desire: to share her heart with a kindred spirit."
+    },
+    {
+        "bookId": 29,
+        "bookTitle": "Eat a Peach",
+        "author": "Ernesto Wade",
+        "rating": 3,
+        "cost": 15.25,
+        "genre": "European",
+        "bookCover": "assets/images/31.jpg",
+        "overview": "Eat a Peach (2020) is a candid memoir that follows American chef David Chang's rise to culinary stardom. It's a raw and honest account of Chang's struggles with mental illness, his thoughts on culture and identity, and how he enacted his vision of a new way of eating in America."
+    },
+    {
+        "bookId": 30,
+        "bookTitle": "Ring Shout",
+        "author": "Rita James",
+        "rating": 5,
+        "cost": 70.00,
+        "genre": "Historical",
+        "bookCover": "assets/images/32.jpg",
+        "overview": "The story follows Maryse Boudreaux on her quest to hunt and destroy the demons summoned by the Ku Klux Klan known as Ku Kluxes. She is joined by fellow hunters Sadie Watkins and Cordelia Lawrence, as a supernatural evil is rising in an alternate history of 1920s Macon, Georgia."
+    },
+    {
+        "bookId": 31,
+        "bookTitle": "Over the Woodward Wall",
+        "author": "Dana Chambers",
+        "rating": 5,
+        "cost": 150.00,
+        "genre": "Fiction",
+        "bookCover": "assets/images/33.jpg",
+        "overview": "When two children climb over a mysterious wall, they're transported to the realm of the Up-and-Under, a bizarre land where dangers abound and anything is possible. To return home, they must “walk the length of the improbable road, all the way to the Impossible City” to speak with its ruler, the Queen of Wands"
+    },
+    {
+        "bookId": 32,
+        "bookTitle": "Piranesi",
+        "author": "Suzanne Casey",
+        "rating": 3,
+        "cost": 33.25,
+        "genre": "Action & Adventure",
+        "bookCover": "assets/images/34.jpg",
+        "overview": "Piranesi is a fantasy novel by English author Susanna Clarke, published by Bloomsbury Publishing in 2020. It is Clarke's second novel, following her debut Jonathan Strange & Mr Norrell (2004), published sixteen years earlier. The novel is set in a parallel universe made up of an infinite number of halls and vestibules, which triggers a gradual loss of memory and identity in newcomers. The story is told through the research notes of the eponymous narrator, who reconstructs the story of his own arrival as he explores this world. Piranesi won the 2021 Women's Prize for Fiction."
+    },
+    {
+        "bookId": 33,
+        "bookTitle": "Long Live the Post Horn",
+        "author": "Karla Newman",
+        "rating": 4,
+        "cost": 46.75,
+        "genre": "Art & Litreture",
+        "bookCover": "assets/images/35.jpg",
+        "overview": "Long Live the Post Horn! is her latest novel to be translated into English, and it tells the story of Ellinor, a 35-year-old publicist who inherits a project after the abrupt disappearance and suicide of her colleague. Her task is to manage communications for Postkom, the Norwegian Post and Communications Union, which opposes the European Union’s directive to allow competition for letters weighing less than 50 grams, which would put the workers’ jobs at risk and threaten the reliability of the postal system in general. Ellinor is jaded, apathetic. She lacks desire for her boyfriend and doesn’t care much about her sister’s fertility woes. She can’t figure out how to write for a client named the Real Thing, a chain of American organic food restaurants. And now, she must learn about the postal service and advise the union, at the last minute, on messaging to convince Norway’s ruling Labour Party to block the EU’s directive, and as such save many postal workers’ jobs. She has to pretend to care — it’s all a performance — and is constantly advised by a colleague, Rolf, to turn to her templates and wait for the project’s inevitable failure, at which point she’ll nod solemnly and accept payment for an outcome that was doomed from the beginning."
+    }
+]
