@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookory • Shop</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/no-bg-logo.png"/>
     <!-- bootstrap -->
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
     <!-- fontawesome -->
@@ -12,7 +13,7 @@
     <!-- swiper -->
     <link rel="stylesheet" href="vendor/swiperjs/swiper-bundle.min.css">
     <!-- local styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
 <body>
@@ -36,11 +37,11 @@
     </div>
 
     <div class="search-bar border-bottom">
-        <div class="container d-flex justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between gap-4 align-items-center">
             <div class="logo">
                 <img src="assets/images/logo-1.svg" alt="Bookory logo" class="img-fluid">
             </div>
-            <div class="search-utils d-flex justify-content-center align-items-center w-75 px-5">
+            <div class="search-utils d-flex justify-content-center align-items-center w-75">
                 <div class="categories dropdown-center">
                     <button
                         class="btn btn-secondary dropdown-toggle rounded-pill w-100 d-flex justify-content-around align-items-center"
@@ -69,13 +70,14 @@
                     </button>
                 </form>
             </div>
-            <div class="user-info">
+            <div class="user-info d-flex flex-nowrap">
                 <a href="#"><i class="fa-regular fa-user py-1 me-2 pe-2 border-end"></i></a>
                 <a href="#"><i class="fa-regular fa-heart py-1 me-2 pe-2 border-end"></i></a>
                 <a href="#"><i class="fa-solid fa-cart-shopping py-1"></i></a>
             </div>
         </div>
     </div>
+
 
     <nav class="navbar navbar-expand-lg bg-white my-2">
         <div class="container d-flex">
@@ -93,13 +95,23 @@
                     <img src="assets/images/no-text-logo.png" alt="bookery logo" class="">
                 </div>
                 <ul class="navbar-nav m-auto">
+                    <li class="nav-item dropdown px-4 d-flex d-lg-none">
+                        <a class="nav-link dropdown-toggle text-black" href="#">
+                            My Profile
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown px-4 d-flex d-lg-none">
+                        <a class="nav-link dropdown-toggle text-black" href="#">
+                            Favorite
+                        </a>
+                    </li>
                     <li class="nav-item dropdown px-4">
                         <a class="nav-link dropdown-toggle text-black" href="index.html">
                             Home
                         </a>
                     </li>
                     <li class="nav-item dropdown px-4 d-flex">
-                        <a class="nav-link active dropdown-toggle text-black" href="shop.html">
+                        <a class="nav-link active dropdown-toggle text-black" href="#">
                             Shop
                         </a>
                     </li>
@@ -121,7 +133,8 @@
                         <a class="nav-link text-black" href="#">Contact</a>
                     </li>
                 </ul>
-                <button class="scroll-up border-0 bg-transparent d-none flex-column justify-content-center align-items-center">
+                <button
+                    class="scroll-up border-0 bg-transparent d-none flex-column justify-content-center align-items-center">
                     <i class="fa-solid fa-angle-up fa-bounce"></i>
                     <p class="m-0">Scroll up</p>
                 </button>
@@ -321,14 +334,13 @@
                             <h2 class="fs-6 fw-bold m-0 ms-3">Filter By Price</h2>
                         </div>
                         <div class="filter border border-top-0 rounded-bottom-4 p-4">
-                            <div class="slider d-flex align-items-center mt-3 px-4">
-                                <i class="fa-regular fa-circle"></i>
-                                <div class="line">
-                                </div>
-                                <i class="fa-regular fa-circle"></i>
+                            <div class="slider-container">
+                                <div class="slider-track"></div>
+                                <input type="range" min="0" max="200" value="0" id="min-slider">
+                                <input type="range" min="0" max="200" value="200" id="max-slider">
                             </div>
-                            <p class="price-range ps-4 pt-3"><span>Price: </span>$10-$1000</p>
-                            <button class="text-uppercase text-decoration-underline border-0 bg-transparent ps-4">
+                            <p class="price-range ps-4 pt-3"><span>Price: </span>$<span id="min-price"></span>-$<span id="max-price"></span></p>
+                            <button class="price-filter-btn text-uppercase text-decoration-underline border-0 bg-transparent ps-4">
                                 filter
                             </button>
                         </div>

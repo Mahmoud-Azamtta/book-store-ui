@@ -5,7 +5,11 @@ const {
     loadPage,
     navbarBehavior,
     scrollTop,
+    buildStarRating
 } = functions;
+
+
+const navbar = document.querySelector(".navbar");
 const dropdowns = document.querySelectorAll(".shop-menu .view .dropdown");
 const header = document.querySelector(".page-title");
 const scrollUp = document.querySelector(".navbar .scroll-up");
@@ -15,7 +19,16 @@ const showFilters = document.querySelector(".show-filters");
 const filtersWrapper = document.querySelector(".filter-options");
 const genresList = document.querySelectorAll(".genre-list input");
 const authorsList = document.querySelectorAll(".authors-list input");
+const priceFilterBtn = document.querySelector(".price-filter-btn");
+const minSliderThumb = document.getElementById("min-slider");
+const maxSliderThumb = document.getElementById("max-slider");
+const minPrice = document.getElementById("min-price");
+const maxPrice = document.getElementById("max-price");
+const sliderTrack = document.querySelector(".slider-track");
+const minPriceGap = 5;
+const maxSliderValue = minSliderThumb.max;
 
+let navbarPosition;
 let filterOptionsHeight = 0;
 let open = false;
 let state = {
@@ -25,13 +38,14 @@ let state = {
     "maxButtons": 3,
     "sorting" : "default-sort",
     "genres": new Set(),
-    "authors": new Set() 
+    "authors": new Set(),
+    "minPrice": 0,
+    "maxPrice": 200
 };
 
 buildList();
 
 showFilters.addEventListener("click", () => {
-    const filtersData = document.querySelector(".filter-options > .row");
     if (open) {
         filtersWrapper.style.height = "0px"; 
         open = false;
@@ -42,6 +56,12 @@ showFilters.addEventListener("click", () => {
     }
 });
 
+priceFilterBtn.addEventListener("click", () => {
+    state.minPrice = minSliderThumb.value;
+    state.maxPrice = maxSliderThumb.value;
+    buildList();
+});
+
 itemsShown.forEach(listItem => {
     listItem.addEventListener("click", () => {
         state.items = listItem.innerHTML;
@@ -49,7 +69,6 @@ itemsShown.forEach(listItem => {
     });
 });
 
-//TODO: when multiple is checked I must work with the original books array
 authorsList.forEach(author => {
     author.addEventListener("click", () => {
         if (author.checked)
@@ -82,10 +101,8 @@ sortingOptions.forEach(option => {
 
 function buildList() {
     const listWrapper = document.querySelector(".menu-items > .row");
-    console.log(state.dataSet);
     state.dataSet = filterData();
     sortBooks();
-    console.log(state.dataSet);
     let data = pagination(state.dataSet, state.page, state.items);
     let bookList = data.dataSet;
     let items = "";
@@ -115,6 +132,7 @@ function filterData() {
     }
     if (state.authors.size > 0)
         bookList = bookList.filter(element => filterAuthors(state.authors).includes(element));
+    bookList = bookList.filter(element => fliterPrice(state.minPrice, state.maxPrice).includes(element));
     return bookList;
 }
 
@@ -136,6 +154,10 @@ function filterAuthors(selectedAuthors) {
     return filteredData;
 }
 
+function fliterPrice(min, max) {
+    return books.filter(element => (element.cost >= min && element.cost <= max));
+}
+
 function sortBooks() {
     if (state.sorting == "rating-sort")
         state.dataSet.sort((a, b) => b.rating - a.rating);
@@ -153,10 +175,10 @@ function createListItem(bookList, idx) {
         <div class="col mt-3 border-end">
             <div class="item book-id="${bookList[idx].bookId}" mt-3">
                 <div class="img-container">
-                    <a href="#"><img src="${bookList[idx].bookCover}" alt="${bookList[idx].bookTitle}"></a>
+                    <a href="item.html?id=${bookList[idx].bookId}"><img src="${bookList[idx].bookCover}" alt="${bookList[idx].bookTitle}"></a>
                 </div>
                 <div class="book-desc">
-                    <a href="#" class="d-block mt-3">${bookList[idx].bookTitle}</a>
+                    <a href="item.html?id=${bookList[idx].bookId}" class="d-block mt-3">${bookList[idx].bookTitle}</a>
                     <div class="star-rating my-2">
                         ${starRating}
                     </div>
@@ -173,30 +195,6 @@ function createListItem(bookList, idx) {
         </div> 
     `;
     return items;
-}
-
-function buildStarRating(rating) {
-    let half = false;
-    if (!Number.isInteger(rating)) {
-        rating = Math.floor(rating);
-        half = true;
-    }
-    let empty = 5 - rating;
-    let starRating = "";
-    while (rating > 0) {
-        starRating += `<i class="fa-solid fa-star"></i>`;
-        rating--;
-    }
-    if (half) {
-        starRating += `<i class="fa-regular fa-star-half-stroke"></i>`;
-        empty--;
-    }
-    while (empty > 0) {
-        starRating += `<i class="fa-regular fa-star"></i>`;
-        empty--;
-    }
-
-    return starRating;
 }
 
 function buildPageButtons(pages) {
@@ -301,6 +299,39 @@ function getFiltersHeight() {
     }
 }
 
+function minSlider() {
+    let minValue = parseInt(minSliderThumb.value);  
+    let maxValue = parseInt(maxSliderThumb.value);
+    if (maxValue - minValue <= minPriceGap) 
+        minSliderThumb.value = Math.round(maxValue - minPriceGap);
+    minPrice.textContent = Math.round(minSliderThumb.value);
+    fillPriceSliderColor();
+}
+
+function maxSlider() {
+    let minValue = parseInt(minSliderThumb.value);  
+    let maxValue = parseInt(maxSliderThumb.value);
+    if (maxValue - minValue <= minPriceGap)
+        maxSliderThumb.value = Math.round(minValue + minPriceGap);
+    maxPrice.textContent = Math.round(maxSliderThumb.value);
+    fillPriceSliderColor();
+}
+
+function fillPriceSliderColor() {
+    let leftPercent = (minSliderThumb.value / maxSliderValue) * 100;
+    let rightPercent = (maxSliderThumb.value / maxSliderValue) * 100;
+    sliderTrack.style.background = `
+        linear-gradient(to right, #ddd ${leftPercent}%, 
+            #000 ${leftPercent}%, 
+            #000 ${rightPercent}%,
+            #ddd ${rightPercent}%)
+    `;
+}
+
+minSliderThumb.addEventListener("input", minSlider);
+
+maxSliderThumb.addEventListener("input", maxSlider);
+
 window.addEventListener("resize", () => {
     moveFilterOptions();
     getFiltersHeight();
@@ -313,10 +344,13 @@ window.addEventListener("load", () => {
     loadPage();
     moveFilterOptions();
     getFiltersHeight();
+    minSlider();
+    maxSlider();
+    navbarPosition = navbar.offsetTop;
 });
 
 window.addEventListener("scroll", () => {
-    navbarBehavior(header);
+    navbarBehavior(header, navbarPosition);
 });
 
 scrollUp.addEventListener("click", scrollTop);

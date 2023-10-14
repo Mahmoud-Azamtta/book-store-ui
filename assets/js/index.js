@@ -6,10 +6,13 @@ const {
     scrollTop,
 } = functions;
 
+const navbar = document.querySelector(".navbar");
 const header = document.querySelector("header");
 const scrollUp = document.querySelector(".navbar .scroll-up");
 const feedback = document.querySelector(".feedback .content");
 const feedbackContainer = document.querySelector(".trends");
+
+let navbarPosition;
 
 const bestsellingSwiper = new Swiper(".bestselling .swiper", {
     slidesPerView: 2,
@@ -65,10 +68,13 @@ const genreSwiper = new Swiper(".genres .swiper-content", {
 });
 
 window.addEventListener("scroll", () => {
-    navbarBehavior(header);
+    navbarBehavior(header, navbarPosition);
 });
 
-window.addEventListener("load", loadPage);
+window.addEventListener("load", () => {
+    loadPage();
+    navbarPosition = navbar.offsetTop;
+});
 
 scrollUp.addEventListener("click", scrollTop);
 

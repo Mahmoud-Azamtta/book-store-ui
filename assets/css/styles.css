@@ -874,24 +874,26 @@ footer .copyright p a {
     font-size: 4rem;
 }
 
-.page-title .page-indicator {
+
+
+.page-indicator {
     font-size: 0.9rem;
 }
 
-.page-title .page-indicator i {
+.page-indicator i {
     font-size: 0.7rem;
     color: #999;
 }
 
-.page-title .page-indicator a {
+.page-indicator a {
     color: #999;
 }
 
-.page-title .page-indicator a:hover {
+.page-indicator a:hover {
     color: #333;
 }
 
-.page-title .page-indicator span {
+.page-indicator span {
     color: var(--primary);
 }
 
@@ -914,20 +916,84 @@ footer .copyright p a {
 /* .sidebar ul li label input[type="checkbox"] {
     background-color: #000;
 } */
-
-.main-content .price-filter .filter .line {
-    height: 2px;
+.filter .slider-container {
+    position: relative;
     width: 100%;
-    background-color: #000;
+    height: 3rem;
 }
 
-.main-content .price-filter .filter i {
-    cursor: e-resize;
-    font-size: 0.8rem;
+.filter .slider-container input[type="range"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    outline: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.filter .slider-container .slider-track {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.slider-container input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 5px;
+}
+
+.slider-container input[type="range"]::-moz-range-progress {
+    -moz-appearance: none;
+    height: 5px;
+}
+
+.slider-container input[type="range"]::-ms-track {
+    appearance: none;
+    height: 5px;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 2px solid #000;
     border-radius: 50%;
+    pointer-events: auto;
+    margin-top: -5px;
 }
 
-.main-content .price-filter .filter i:hover {
+.slider-container input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    pointer-events: auto;
+    margin-top: -6px;
+}
+
+.slider-container input[type="range"]::-ms-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    pointer-events: auto;
+    margin-top: -6px;
+}
+
+.slider-container input[type="range"]:active::-webkit-slider-thumb {
     box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -1149,6 +1215,94 @@ footer .copyright p a {
 .main-content .page-indicators .prev i,
 .main-content .page-indicators .next i {
     font-size: 0.6rem;
+}
+
+/* ------------ Shop page ------------ */
+.book-details .book-cover,
+.book-details .book-information {
+    padding: 2rem;
+}
+
+.book-details .book-information .stock {
+    font-size: 0.8rem;
+    background-color: #e8f6e1;
+    color: #72c949;
+    padding: 0.1rem 0.7rem;
+}
+
+.book-details .star-rating {
+    font-size: 0.8rem;
+}
+
+.book-information .stock-diagram {
+    height: 8px;
+}
+
+.book-information .stock-diagram .sold {
+    width: 35%;
+    background-color: var(--primary);
+}
+
+.book-information .stock-diagram .available {
+    width: 65%;
+    background-color: #ddd;
+}
+
+.book-information .indicator {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.book-information p {
+    font-size: 0.8rem;
+}
+
+.book-information .cost {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.purchase-options .cart button {
+    background-color: var(--primary);
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+.purchase-options .cart button:hover {
+    background-color: #f4402f;
+} 
+
+.purchase-options .cart button span {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.book-information .social-media a {
+    color: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.book-information .social-media a:nth-child(1) {
+    background-color: #4267B2;
+}
+
+.book-information .social-media a:nth-child(2) {
+    background-color: #1DA1F2;
+}
+
+.book-information .social-media a:nth-child(3) {
+    background-color: #0072b1;
+}
+
+.book-information .social-media a:nth-child(4) {
+    background-color: #E60023;
 }
 
 /* media query */
