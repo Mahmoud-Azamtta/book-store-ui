@@ -913,9 +913,6 @@ footer .copyright p a {
     color: var(--primary);
 }
 
-/* .sidebar ul li label input[type="checkbox"] {
-    background-color: #000;
-} */
 .filter .slider-container {
     position: relative;
     width: 100%;
@@ -1059,11 +1056,6 @@ footer .copyright p a {
 .shop-menu .view-options .grid-list .active-view {
     color: #000;
 }
-/* .shop-menu .view select,
-.shop-menu .view select option {
-    font-size: 0.8rem;
-} */
-
 
 .shop-menu .view .dropdown {
     font-size: 0.8rem;
@@ -1217,7 +1209,7 @@ footer .copyright p a {
     font-size: 0.6rem;
 }
 
-/* ------------ Shop page ------------ */
+/* ------------ Item page ------------ */
 .book-details .book-cover,
 .book-details .book-information {
     padding: 2rem;

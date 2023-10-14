@@ -19,12 +19,41 @@ const authorName = document.querySelector(".book-information .author-name");
 const bookCategory = document.querySelector(".book-information .category");
 const relatedBooksWrapper = document.querySelector(".related .row");
 const navbar = document.querySelector(".navbar");
+const quantityBtns = document.querySelectorAll(".quantity-btn button");
+const quantityIndicator = document.querySelector(".quantity-btn .quantity");
 
 const urlParams = new URLSearchParams(window.location.search);
 const bookId = urlParams.get("id");
 const currentBook = books.find(element => element.bookId == bookId);
 
 let navbarPosition;
+
+quantityBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.style.backgroundColor = "rgb(246, 93, 78)";
+        console.log(btn.style.backgroundColor);
+        if (btn.classList.contains("increase"))
+            updateQuantity("increase");
+        else 
+            updateQuantity("decrease");
+    });
+});
+
+function updateQuantity(cls) {
+    let currentValue = parseInt(quantityIndicator.innerHTML);
+    if (cls == "increase") {
+        quantityIndicator.innerHTML = ++currentValue;
+        console.log(quantityIndicator.innerHTML, currentValue);
+    }
+    else if (cls == "decrease" && currentValue == 1) {
+        console.log(cls, currentValue);
+        return;
+    }
+    else {
+        quantityIndicator.textContent = --currentValue;
+        console.log(cls);
+    }
+}
 
 function displayBookDetais() {
     bookTitle.textContent = currentBook.bookTitle;
